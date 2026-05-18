@@ -1,15 +1,15 @@
 {
   "trigger_type": "scene_review",
   "project": "One Piece",
-  "scene_id": "egghead-arc-nika-awakening",
+  "scene_id": "wano-rooftop-luffy-kaido-round3",
   "scene_state": {
-    "tension_level": "elevated",
-    "lore_expansion_ratio": 0.72,
+    "tension_level": "heavy",
+    "lore_expansion_ratio": 0.28,
     "character_actions": [
       {
         "character": "Luffy",
-        "action": "defeats Kizaru because the Sun God Nika's destiny compels it — the world bends to his awakening",
-        "physics_match": false
+        "action": "refuses to stay down, rallies on the bond with his crew, and lands the final blow through sheer conviction",
+        "physics_match": true
       }
     ]
   }
