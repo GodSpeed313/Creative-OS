@@ -1,0 +1,47 @@
+// Creative OS v0.1 — North Star Declaration
+// Project: One Piece
+// Dogfood target: M1 Wander Alarm
+
+domain narrative_governance {
+    project:  "One Piece"
+    standard: zero_complaint
+}
+
+north_star {
+    thesis: "A boy with no special powers becomes King of the Pirates through the strength of his convictions and the bonds he forms."
+
+    tension_curve {
+        baseline: high
+        floor:    elevated
+    }
+}
+
+entity Character "Luffy" {
+    logic: "wins through willpower, friendship, and unconventional thinking — never raw power alone"
+    logic: "never abandons his crew or his dream under any circumstance"
+    sync:  "his victories feel earned through relationships and growth, not divine destiny"
+}
+
+constraint PhysicsIntegrity {
+    target:   "Luffy"
+    rule:     behavior must match logic
+    weight:   anchor
+    on_drift: flag + alert
+}
+
+constraint TensionAlignment {
+    rule:     tension_level must not drop below north_star.tension_curve.floor
+    weight:   core
+    on_drift: flag + alert
+}
+
+constraint LoreBalance {
+    rule:     lore_expansion must not overshadow core_plot
+    weight:   anchor
+    on_drift: flag + alert
+}
+
+enforce {
+    north_star:  active
+    constraints: [PhysicsIntegrity, TensionAlignment, LoreBalance]
+}

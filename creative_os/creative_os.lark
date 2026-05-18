@@ -1,0 +1,78 @@
+// Creative OS v0.1 — Narrative Governance Grammar
+// Governs: North Star declarations, character physics, constraint definitions
+
+start: declaration+
+
+declaration: domain_decl
+           | north_star_decl
+           | entity_decl
+           | constraint_decl
+           | enforce_decl
+
+// ─── Domain ───────────────────────────────────────────────────────────────────
+
+domain_decl: "domain" "narrative_governance" "{" domain_body "}"
+domain_body: (domain_field NEWLINE*)*
+domain_field: "project" ":" STRING     -> project_field
+            | "standard" ":" STANDARD  -> standard_field
+
+STANDARD: "zero_complaint"
+
+// ─── North Star ───────────────────────────────────────────────────────────────
+
+north_star_decl: "north_star" "{" north_star_body "}"
+north_star_body: (north_star_field NEWLINE*)*
+north_star_field: "thesis" ":" STRING           -> thesis_field
+                | tension_curve_decl
+
+tension_curve_decl: "tension_curve" "{" tension_body "}"
+tension_body: (tension_field NEWLINE*)*
+tension_field: "baseline" ":" TENSION_LEVEL     -> baseline_field
+             | "floor"    ":" TENSION_LEVEL     -> floor_field
+
+TENSION_LEVEL: "extreme" | "heavy" | "high" | "elevated" | "medium" | "low"
+
+// ─── Entity (Character) ───────────────────────────────────────────────────────
+
+entity_decl: "entity" "Character" STRING "{" entity_body "}"
+entity_body: (entity_field NEWLINE*)*
+entity_field: "logic" ":" STRING   -> logic_field
+            | "sync"  ":" STRING   -> sync_field
+
+// ─── Constraints ──────────────────────────────────────────────────────────────
+
+constraint_decl: "constraint" IDENTIFIER "{" constraint_body "}"
+constraint_body: (constraint_field NEWLINE*)*
+constraint_field: "target"   ":" STRING          -> target_field
+                | "rule"     ":" rule_expr        -> rule_field
+                | "weight"   ":" WEIGHT           -> weight_field
+                | "on_drift" ":" drift_action     -> on_drift_field
+
+WEIGHT: "anchor" | "core" | "tone"
+
+rule_expr: IDENTIFIER "must" "not" "drop" "below" "north_star.tension_curve.floor"  -> tension_floor_rule
+         | IDENTIFIER "must" "match" IDENTIFIER                                      -> match_rule
+         | IDENTIFIER "must" "not" "overshadow" IDENTIFIER                          -> balance_rule
+
+drift_action: DRIFT_TOKEN ("+" DRIFT_TOKEN)*
+DRIFT_TOKEN: "flag" | "alert"
+
+// ─── Enforce ──────────────────────────────────────────────────────────────────
+
+enforce_decl: "enforce" "{" enforce_body "}"
+enforce_body: (enforce_field NEWLINE*)*
+enforce_field: "north_star"  ":" "active"              -> north_star_active
+             | "constraints" ":" "[" constraint_list "]" -> constraints_field
+
+constraint_list: IDENTIFIER ("," IDENTIFIER)*
+
+// ─── Terminals ────────────────────────────────────────────────────────────────
+
+IDENTIFIER: /[A-Za-z_][A-Za-z0-9_]*/
+STRING: "\"" /[^"]*/ "\""
+NEWLINE: /\r?\n/
+COMMENT: /\/\/[^\n]*/
+
+%ignore COMMENT
+%ignore /[ \t\f]+/
+%ignore NEWLINE

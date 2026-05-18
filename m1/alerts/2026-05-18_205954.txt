@@ -1,0 +1,29 @@
+VIBE-CONSTRAINT ALERT
+════════════════════════════════════════════════════════════
+Timestamp    : 2026-05-18T20:59:54.611Z
+Project      : One Piece
+Scene        : egghead-arc-nika-awakening
+Thesis       : A boy with no special powers becomes King of ...
+════════════════════════════════════════════════════════════
+├── CONSTRAINT: PhysicsIntegrity [weight: anchor]
+│   ├── Evaluation : Luffy: action 'defeats Kizaru because the Sun God Nika's destiny compels it — the world bends to his awakening' violates declared physics
+│   ├── ✗ DRIFT DETECTED
+│   ├── Finding    : Physics Violation — Luffy acting outside declared logic
+│   └── Action     : flag + alert
+│
+├── CONSTRAINT: TensionAlignment [weight: core]
+│   ├── Evaluation : tension_level = 'elevated', meets floor 'elevated'
+│   └── ✓ ALIGNED — no action
+│
+└── CONSTRAINT: LoreBalance [weight: anchor]
+    ├── Evaluation : lore_expansion_ratio = 0.72 — exceeds 0.5 threshold
+    ├── ✗ DRIFT DETECTED
+    ├── Finding    : Lore Creep detected — world-building volume overwhelming core plot signal
+    └── Action     : flag + alert
+│
+└── RESOLUTION
+    ├── System state : DRIFTING
+    ├── Drift count  : 2 violation(s) detected
+    │   · PhysicsIntegrity [anchor] — Physics Violation — Luffy acting outside declared logic
+    │   · LoreBalance [anchor] — Lore Creep detected — world-building volume overwhelming core plot signal
+    └── The Wander Alarm has triggered. Review flagged constraints before continuing.
