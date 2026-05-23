@@ -12,3 +12,7 @@ venv/
 
 # IR files are compiled artifacts — not committed
 m1/ir.json
+veritas/ir.json
+
+# Tool-generated directories
+.letta/

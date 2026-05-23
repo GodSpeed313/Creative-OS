@@ -1,7 +1,8 @@
 """run_wander.py — Run the Wander Engine against a draft snapshot.
 
 Usage:
-    python run_wander.py
+    python run_wander.py                              # defaults to m1/
+    python run_wander.py <ir.json> <snapshot.json>
 """
 
 from __future__ import annotations
@@ -28,8 +29,17 @@ def _load(path: Path) -> dict:
 
 
 def main() -> None:
-    ir       = _load(M1 / "ir.json")
-    snapshot = _load(M1 / "draft_snapshot.json")
+    if len(sys.argv) == 3:
+        ir_path       = Path(sys.argv[1])
+        snapshot_path = Path(sys.argv[2])
+        alerts_dir    = snapshot_path.parent / "alerts"
+    else:
+        ir_path       = M1 / "ir.json"
+        snapshot_path = M1 / "draft_snapshot.json"
+        alerts_dir    = M1 / "alerts"
+
+    ir       = _load(ir_path)
+    snapshot = _load(snapshot_path)
 
     from creative_os.engine import evaluate
     trace, rendered, exit_code = evaluate(ir, snapshot)
@@ -37,8 +47,9 @@ def main() -> None:
     print(rendered)
 
     if exit_code == 1:
+        alerts_dir.mkdir(parents=True, exist_ok=True)
         ts   = datetime.now(timezone.utc).strftime("%Y-%m-%d_%H%M%S")
-        dest = M1 / "alerts" / f"{ts}.txt"
+        dest = alerts_dir / f"{ts}.txt"
         dest.write_text(rendered, encoding="utf-8")
         print(f"\nAlert saved -> {dest}")
     else:

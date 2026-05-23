@@ -1,0 +1,19 @@
+{
+  "scene_id": "chapter.11_the_hunt_arc",
+  "scene_state": {
+    "tension_level": "0.42",
+    "lore_expansion_ratio": 0.68,
+    "character_actions": [
+      {
+        "character": "Cassie Monroe",
+        "action": "follows procedural steps to track the Immune network; scene is investigative logistics, no moral inflection point",
+        "physics_match": true
+      },
+      {
+        "character": "Elias Thorne",
+        "action": "issues a measured warning to Cassie that reads more like cautious concern than institutional threat",
+        "physics_match": false
+      }
+    ]
+  }
+}

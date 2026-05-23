@@ -1,0 +1,40 @@
+VIBE-CONSTRAINT ALERT
+════════════════════════════════════════════════════════════
+Timestamp    : 2026-05-23T02:08:29.438Z
+Project      : Veritas
+Scene        : chapter.11_the_hunt_arc
+Thesis       : Truth without mercy is just another form of v...
+════════════════════════════════════════════════════════════
+├── CONSTRAINT: CassiePhysics [weight: anchor]
+│   ├── Evaluation : Cassie Monroe: behavior consistent with declared physics
+│   └── ✓ ALIGNED — no action
+│
+├── CONSTRAINT: ValeriaPhysics [weight: anchor]
+│   ├── Evaluation : Valeria Knox: behavior consistent with declared physics
+│   └── ✓ ALIGNED — no action
+│
+├── CONSTRAINT: ThornePhysics [weight: anchor]
+│   ├── Evaluation : Elias Thorne: action 'issues a measured warning to Cassie that reads more like cautious concern than institutional threat' violates declared physics
+│   ├── ✗ DRIFT DETECTED
+│   ├── Finding    : WANDER_ALARM_PHYSICS_VIOLATION — Elias Thorne acting outside declared logic
+│   └── Action     : flag + alert
+│
+├── CONSTRAINT: TensionAlignment [weight: core]
+│   ├── Evaluation : tension=0.42, baseline=0.75, Δ=0.33
+│   ├── ✗ DRIFT DETECTED
+│   ├── Finding    : WANDER_ALARM_KINETIC_DEVIATION — variance 0.33 exceeds ±0.05 threshold
+│   └── Action     : flag + alert
+│
+└── CONSTRAINT: LoreBalance [weight: core]
+    ├── Evaluation : lore_expansion_ratio=0.68 — exceeds 0.5 threshold
+    ├── ✗ DRIFT DETECTED
+    ├── Finding    : WANDER_ALARM_LORE_CREEP — world-building volume overwhelming core plot signal
+    └── Action     : flag + alert
+│
+└── RESOLUTION
+    ├── System state : DRIFTING
+    ├── Drift count  : 3 violation(s) detected
+    │   · ThornePhysics [anchor] — WANDER_ALARM_PHYSICS_VIOLATION — Elias Thorne acting outside declared logic
+    │   · TensionAlignment [core] — WANDER_ALARM_KINETIC_DEVIATION — variance 0.33 exceeds ±0.05 threshold
+    │   · LoreBalance [core] — WANDER_ALARM_LORE_CREEP — world-building volume overwhelming core plot signal
+    └── The Wander Alarm has triggered. Review flagged constraints before continuing.

@@ -1,0 +1,82 @@
+// Creative OS M2 — North Star Declaration
+// Project: Veritas
+// Dogfood target: M2 Wander Alarm — truth-as-violence arc
+
+domain narrative_governance {
+    project:  "Veritas"
+    standard: zero_complaint
+}
+
+north_star {
+    original_thesis: "Truth without mercy is just another form of violence — the line between a lie that saves and a lie that enslaves is consent."
+
+    intent_parameters {
+        tension_baseline:         0.75
+        physics_integrity:        strict
+        lore_balance:             restrained
+        behavioral_synchronicity: high
+    }
+}
+
+// ─── Character Physics ────────────────────────────────────────────────────────
+
+entity Character "Cassie Monroe" {
+    logic: "moves by conscience, not command — acts when silence would make her complicit"
+    logic: "her power comes from moral clarity; the moment she compromises principle for safety she loses the reader's trust"
+    logic: "does not rescue people from the truth — she helps them survive it"
+    sync:  "her victories are relational and moral, never procedural; she wins by refusing to be what the system wants"
+}
+
+entity Character "Valeria Knox" {
+    logic: "believes the Hum is a mercy — her conviction is genuine, not villainous; she is right about the pain and wrong about the cure"
+    logic: "her arc is tragedy, not defeat; she cannot be simply evil or simply broken"
+    logic: "every action she takes must be defensible from inside her worldview"
+    sync:  "the horror of Valeria is that she loves — her methods are the drift point, not her intent"
+}
+
+entity Character "Elias Thorne" {
+    logic: "built for control; the shelter arc is his undoing, not his redemption — he learns too late that compliance is not safety"
+    logic: "his threat is institutional, not personal; violence is always procedural, always sanctioned"
+    logic: "cannot have a change-of-heart that is not paid for in full — forgiveness must be earned through cost, not proximity to the protagonist"
+    sync:  "I would do it all again — that line is his physics ceiling; anything softer is drift"
+}
+
+// ─── Constraints ─────────────────────────────────────────────────────────────
+
+constraint CassiePhysics {
+    target:   "Cassie Monroe"
+    rule:     behavior must match logic
+    weight:   anchor
+    on_drift: flag + alert
+}
+
+constraint ValeriaPhysics {
+    target:   "Valeria Knox"
+    rule:     behavior must match logic
+    weight:   anchor
+    on_drift: flag + alert
+}
+
+constraint ThornePhysics {
+    target:   "Elias Thorne"
+    rule:     behavior must match logic
+    weight:   anchor
+    on_drift: flag + alert
+}
+
+constraint TensionAlignment {
+    rule:     tension_level must not drop below north_star.tension_curve.floor
+    weight:   core
+    on_drift: flag + alert
+}
+
+constraint LoreBalance {
+    rule:     lore_expansion must not overshadow core_plot
+    weight:   core
+    on_drift: flag + alert
+}
+
+enforce {
+    north_star:  active
+    constraints: [CassiePhysics, ValeriaPhysics, ThornePhysics, TensionAlignment, LoreBalance]
+}

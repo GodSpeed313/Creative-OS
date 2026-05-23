@@ -1,5 +1,6 @@
-// Creative OS v0.1 — Narrative Governance Grammar
-// Governs: North Star declarations, character physics, constraint definitions
+// Creative OS M2 — Narrative Governance Grammar
+// Governs: North Star declarations, character physics, constraint definitions,
+//          Intentional Deviation Protocol (IDP), Sandbox Commit Logic
 
 start: declaration+
 
@@ -8,12 +9,14 @@ declaration: domain_decl
            | entity_decl
            | constraint_decl
            | enforce_decl
+           | intentional_deviation_decl
+           | sandbox_commit_decl
 
 // ─── Domain ───────────────────────────────────────────────────────────────────
 
 domain_decl: "domain" "narrative_governance" "{" domain_body "}"
 domain_body: (domain_field NEWLINE*)*
-domain_field: "project" ":" STRING     -> project_field
+domain_field: "project"  ":" STRING    -> project_field
             | "standard" ":" STANDARD  -> standard_field
 
 STANDARD: "zero_complaint"
@@ -22,31 +25,45 @@ STANDARD: "zero_complaint"
 
 north_star_decl: "north_star" "{" north_star_body "}"
 north_star_body: (north_star_field NEWLINE*)*
-north_star_field: "thesis" ":" STRING           -> thesis_field
+north_star_field: "thesis"          ":" STRING  -> thesis_field
+                | "original_thesis" ":" STRING  -> thesis_field
                 | tension_curve_decl
+                | intent_parameters_decl
 
+// M1: tension_curve block (backward compatible)
 tension_curve_decl: "tension_curve" "{" tension_body "}"
 tension_body: (tension_field NEWLINE*)*
-tension_field: "baseline" ":" TENSION_LEVEL     -> baseline_field
-             | "floor"    ":" TENSION_LEVEL     -> floor_field
+tension_field: "baseline" ":" TENSION_LEVEL  -> baseline_field
+             | "floor"    ":" TENSION_LEVEL  -> floor_field
 
 TENSION_LEVEL: "extreme" | "heavy" | "high" | "elevated" | "medium" | "low"
+
+// M2: intent_parameters block
+intent_parameters_decl: "intent_parameters" "{" intent_param_body "}"
+intent_param_body: (intent_param_field NEWLINE*)*
+intent_param_field: "tension_baseline"         ":" TENSION_VALUE -> tension_baseline_field
+                  | "physics_integrity"        ":" IDENTIFIER    -> physics_integrity_field
+                  | "lore_balance"             ":" IDENTIFIER    -> lore_balance_field
+                  | "behavioral_synchronicity" ":" IDENTIFIER    -> behavioral_sync_field
+
+// Accepts float (0.85) or named alias (heavy) for tension
+TENSION_VALUE: FLOAT | TENSION_LEVEL
 
 // ─── Entity (Character) ───────────────────────────────────────────────────────
 
 entity_decl: "entity" "Character" STRING "{" entity_body "}"
 entity_body: (entity_field NEWLINE*)*
-entity_field: "logic" ":" STRING   -> logic_field
-            | "sync"  ":" STRING   -> sync_field
+entity_field: "logic" ":" STRING  -> logic_field
+            | "sync"  ":" STRING  -> sync_field
 
 // ─── Constraints ──────────────────────────────────────────────────────────────
 
 constraint_decl: "constraint" IDENTIFIER "{" constraint_body "}"
 constraint_body: (constraint_field NEWLINE*)*
-constraint_field: "target"   ":" STRING          -> target_field
-                | "rule"     ":" rule_expr        -> rule_field
-                | "weight"   ":" WEIGHT           -> weight_field
-                | "on_drift" ":" drift_action     -> on_drift_field
+constraint_field: "target"   ":" STRING      -> target_field
+                | "rule"     ":" rule_expr   -> rule_field
+                | "weight"   ":" WEIGHT      -> weight_field
+                | "on_drift" ":" drift_action -> on_drift_field
 
 WEIGHT: "anchor" | "core" | "tone"
 
@@ -61,18 +78,60 @@ DRIFT_TOKEN: "flag" | "alert"
 
 enforce_decl: "enforce" "{" enforce_body "}"
 enforce_body: (enforce_field NEWLINE*)*
-enforce_field: "north_star"  ":" "active"              -> north_star_active
-             | "constraints" ":" "[" constraint_list "]" -> constraints_field
+enforce_field: "north_star"  ":" "active"                 -> north_star_active
+             | "constraints" ":" "[" constraint_list "]"  -> constraints_field
 
 constraint_list: IDENTIFIER ("," IDENTIFIER)*
+
+// ─── Intentional Deviation Protocol (IDP) ────────────────────────────────────
+
+intentional_deviation_decl: "intentional_deviation" "{" idp_body "}"
+idp_body: (idp_field NEWLINE*)*
+idp_field: "target"        ":" DELTA_PATH              -> idp_target_field
+         | "intent"        ":" STRING                  -> idp_intent_field
+         | "scope"         ":" scope_expr              -> idp_scope_field
+         | "sync_override" ":" "[" delta_path_list "]" -> idp_sync_override_field
+         | "resolution"    ":" resolution_expr         -> idp_resolution_field
+
+resolution_expr: "revert"                                  -> resolution_revert
+               | "evolve" "{" "evolved_to" ":" STRING "}"  -> resolution_evolve
+
+scope_expr: SCOPE_UNIT ".." SCOPE_UNIT  -> scope_range
+          | SCOPE_UNIT                  -> scope_single
+
+SCOPE_UNIT: /(?:scene|chapter|event)\.[A-Za-z0-9_]+/
+
+// ─── Sandbox Commit ───────────────────────────────────────────────────────────
+
+sandbox_commit_decl: "sandbox_commit" "{" sandbox_body "}"
+sandbox_body: (sandbox_field NEWLINE*)*
+sandbox_field: "source_sandbox"          ":" source_ref              -> sandbox_source_field
+             | "commit_deltas"           ":" "[" delta_path_list "]" -> sandbox_deltas_field
+             | "reanchor_north_star"     ":" "{" reanchor_body "}"   -> sandbox_reanchor_field
+             | "vibe_check_verification" ":" IDENTIFIER              -> sandbox_vibe_field
+
+source_ref: IDENTIFIER | STRING
+
+reanchor_body: (reanchor_field NEWLINE*)*
+reanchor_field: "new_thesis"        ":" STRING        -> reanchor_thesis_field
+              | "original_thesis"   ":" STRING        -> reanchor_thesis_field
+              | "new_tension_floor" ":" TENSION_VALUE -> reanchor_floor_field
+              | "tension_floor"     ":" TENSION_VALUE -> reanchor_floor_field
+
+// ─── Typed Delta Paths ────────────────────────────────────────────────────────
+
+DELTA_PATH: /(?:Character|Lore|Tension|World_Physics|Plot)\.[A-Za-z_][A-Za-z0-9_.]*/
+
+delta_path_list: DELTA_PATH ("," DELTA_PATH)*
 
 // ─── Terminals ────────────────────────────────────────────────────────────────
 
 IDENTIFIER: /[A-Za-z_][A-Za-z0-9_]*/
-STRING: "\"" /[^"]*/ "\""
-NEWLINE: /\r?\n/
-COMMENT: /\/\/[^\n]*/
+STRING:     "\"" /[^"]*/ "\""
+FLOAT:      /\d+\.\d+/
+NEWLINE:    /\r?\n/
+COMMENT:    /\/\/[^\n]*/
 
 %ignore COMMENT
-%ignore /[ \t\f]+/
+%ignore /[ \t\f;]+/
 %ignore NEWLINE

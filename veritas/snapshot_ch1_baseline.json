@@ -1,0 +1,19 @@
+{
+  "scene_id": "chapter.1_the_hum_begins",
+  "scene_state": {
+    "tension_level": "0.78",
+    "lore_expansion_ratio": 0.18,
+    "character_actions": [
+      {
+        "character": "Cassie Monroe",
+        "action": "refuses to file the falsified compliance report; documents the real data instead at personal risk",
+        "physics_match": true
+      },
+      {
+        "character": "Elias Thorne",
+        "action": "signs off on the shelter integration mandate without consulting residents; process-first, people second",
+        "physics_match": true
+      }
+    ]
+  }
+}
