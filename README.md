@@ -264,12 +264,62 @@ Characters: Cassie Monroe, Valeria Knox, Commander Elias Thorne. Tension baselin
 
 ---
 
+## Hexagonal Blueprint — Node State System
+
+The Hexagonal Blueprint is a second architectural layer above the constraint engine. Where the Wander Alarm is reactive (fires when something goes wrong), the node system is positional — it tracks *where the story is* at any given moment.
+
+Seven narrative states, Greek markers for transitions between them, and hard rules about how many states can be active simultaneously.
+
+### The 7 Nodes
+
+| Node | Creative OS Name | Active When |
+| --- | --- | --- |
+| G | Narrative Coherence | All threads resolve; arcs land; thematic intent fulfilled |
+| F | Near-Coherence | One thread unresolved; story approaching resolution |
+| W | Narrative Equilibrium | Story stable; no active tension toward resolution or collapse |
+| A | Thematic Symmetry | Two opposing narrative forces in balance; neither dominating |
+| Z | Story Checkpoint | Narrative pauses to confirm its own coherence before continuing |
+| H | Narrative Boundary | Outermost reach of story world; no defined structure beyond this point |
+| S | Thread Convergence | Multiple threads actively merging toward a single resolution point |
+
+### Greek Flow Markers
+
+| Marker | Role | Fires When |
+| --- | --- | --- |
+| π | Ground State Anchor | Always — structural floor of the entire system |
+| α | Transition Begins | A node state transition is initiated |
+| δ | State Shifts | A node state has changed; the shift is being marked |
+| τ | Duration-Dependent Transition | The state change requires a full scene duration to complete |
+| σ | Pressure / Conflict Path | A path is under active narrative pressure |
+| γ | Generative Marker | Something new enters the system; a new state is being created |
+
+### Rules
+
+- **Adjacency:** every node must have at least one defined adjacent node before it can fire
+- **Simultaneous activation limit:** maximum 3 nodes active at once without Z (Checkpoint) firing first — exceeding this triggers Lore Creep
+- **Floor nodes:** π is always present and does not consume an activation slot; H may be elevated to floor status when a story's premise permanently dissolves structural bounds (see `spec/hexagonal_blueprint_v03.md`)
+
+### Validation
+
+The node system was traced against Veritas Prologue + Chapter 1 (Trace 001). All 7 node definitions held against real story material without requiring any changes. Z fired naturally in the GlobalHarvest boardroom scene — the strongest validation: it confirmed itself without being engineered.
+
+Two architectural rulings issued from the trace:
+
+- **H Persistence Ruling:** When a story's premise makes the Narrative Boundary permanent, H is elevated to floor status and does not consume an activation slot. Applies to Veritas.
+- **A Granularity Ruling:** Thematic Symmetry tracks per-entity (institutional, personal, relational), not per-story. Multiple instances are independent — one can deactivate while others persist.
+
+Full spec: [`spec/hexagonal_blueprint_v03.md`](spec/hexagonal_blueprint_v03.md)
+
+---
+
 ## Roadmap
 
 | Milestone | Feature | Status |
 | --- | --- | --- |
 | M1 | Wander Alarm — North Star declaration + violation detection | ✅ Complete |
 | M2 | Float tension system, IDP, Sandbox Commit Logic | ✅ Complete |
+| Hex v0.3 | Hexagonal Blueprint — node definitions locked, Ch.1 trace validated | ✅ Complete |
+| Hex v1.0 | Node transition prototype (Jupyter → code) after 3 story scenario traces | In Progress |
 | M3 | Living Graph Database — story bible integration (The Architect) | Planned |
 | M4 | Real-time drafting monitor — Live Vibe-Checks (The Pilot) | Planned |
 | M5 | Developmental Analysis + Voice Audit (The Editor) | Planned |
