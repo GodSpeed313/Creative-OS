@@ -1,10 +1,11 @@
 # HEXAGONAL BLUEPRINT
+
 Node Validation & Mapping Document
 Creative OS — Standalone Implementation
-Version 0.4 — Ch.2 + Ch.3 Traced — S, Z, A Definitions Refined
+Version 0.4 — Ch.2 + Ch.3 Traced — S, Z, A Definitions Refined — τ Locked
 
 **Changes from v0.3:**
-S definition rewritten — "resolution point" disambiguated to "point of unification" | Z states added — Complete, Truncated, Partial/External + deferral-resolution clause | A definition clarified — activation ≠ balance; tilted A is valid and carries information | Rulings 6.3–6.5 issued | Ruling 6.6 flagged open (S sibling marker) | τ second-candidate confirmation noted | Traces 002 and 003 added | 3 of 3 story scenarios complete — Jupyter prototype unlocked
+S definition rewritten | Z states added (Complete / Truncated / Partial-External) + deferral-resolution clause | A clarified — activation ≠ balance | τ promoted to Locked (Ch.1 boardroom + Ch.3 drive, two clean confirmations) | τ approach-sequence observation noted | Rulings 6.3–6.6 issued | Traces 002 and 003 added | 3 of 3 story scenarios complete — Jupyter prototype unlocked
 
 ---
 
@@ -38,6 +39,7 @@ Three definitions updated from v0.3: S (rewritten), Z (states added), A (activat
 ### Node Notes — A
 
 A can activate in a tilted state. Activation and balance are separate events. When A activates, record:
+
 - The entity level (institutional, personal, relational)
 - The register of each pole (assertion, grief, witness, justification, etc.)
 - The armor status of each party (intact, partially exposed, fully exposed)
@@ -57,6 +59,7 @@ Z fires in three modes:
 **Deferral-resolution clause:** A truncated or partial Z resolves when three conditions are met: (1) the scene is sealed — the external world is locked out; (2) the collapse is self-confessed rather than externally triggered or discovered; (3) there is no interruption available. The completion fires to the full definition.
 
 **Veritas Z chain (evidence):**
+
 - Ch.1 boardroom: Cassie professional → **Complete**
 - Ch.2 apartment: Cassie domestic → **Complete**
 - Ch.3 bank: Valeria purpose → **Truncated** (mob invades mid-confirmation)
@@ -80,19 +83,20 @@ Evidence from Veritas: the Shadow Ledger is retrieved in the vault (before the t
 | π | Ground State Anchor | Always present — bottom terminal of entire axis; all flow references this point | Extracted from source material | 🔒 Locked |
 | α | Transition Begins | A node state transition is initiated; story moves from one state to another | Extracted from source material | 🔒 Locked |
 | δ | State Shifts | A node state has changed; the shift itself is being marked | Extracted from source material | 🔒 Locked |
-| τ | Duration-Dependent Transition | A transition is timebound; the state change requires a defined story duration to complete | Assigned by spec author | 🔒 Assigned |
+| τ | Duration-Dependent Transition | A transition is timebound; the state change requires a defined story duration to complete | Assigned by spec author — confirmed Ch.1 boardroom + Ch.3 drive | 🔒 Locked |
 | σ | Pressure / Conflict Path | A path is under active narrative pressure or conflict; tension is elevated on this connection | Assigned by spec author | 🔒 Assigned |
 | γ | Generative Marker | A new state is being created rather than transitioned into; something new enters the system | Assigned by spec author | 🔒 Assigned |
 
 ↳ π is the only marker that is always present. It is the structural floor of the entire system.
 ↳ α always fires before any node state transition. You cannot reach δ without passing through α first.
-↳ τ vs δ: δ marks *that* a state changed. τ marks that the change *required the full duration of a scene to complete.* Second-candidate confirmation: Ch.3 drive sequence (reaching the bank required the full drive — every thud, every foot of ground). Promote τ to 🔒 Locked after Kevin confirms Ch.3 τ call.
+↳ τ vs δ: δ marks *that* a state changed. τ marks that the change *required the full duration of a scene to complete* — shortcutting the duration breaks the structural logic. Confirmed across two distinct scene genres: Ch.1 boardroom (professional confrontation) and Ch.3 drive (kinetic action sequence). τ was not forced or stretched in either case.
+↳ τ approach-sequence observation: both confirmed τ firings are approach sequences — transitions moving toward a convergence or confrontation. This is an observation, not a constraint. If τ later fires in a retreat or aftermath sequence and holds, the definition stays general. If it only ever fires on approach, that information should eventually be reflected in the language. Track; do not constrain.
 
 ---
 
 ## Section 3: Constraint Map
 
-*(Unchanged from v0.3)*
+Unchanged from v0.3.
 
 | Domain | Forcing Constraint | Geometric Result | Creative OS Equivalent |
 | --- | --- | --- | --- |
@@ -110,7 +114,7 @@ Evidence from Veritas: the Shadow Ledger is retrieved in the vault (before the t
 
 ## Section 4: Failure Mode — Lore Creep
 
-*(Unchanged from v0.3)*
+Unchanged from v0.3.
 
 | Failure Mode | Trigger Condition | Geometric Equivalent | Minimum Rule That Prevents It |
 | --- | --- | --- | --- |
@@ -124,7 +128,7 @@ Evidence from Veritas: the Shadow Ledger is retrieved in the vault (before the t
 
 ## Section 5: Physics Node Reference
 
-*(Unchanged from v0.3 — reference only)*
+Unchanged from v0.3. Reference only — not part of Creative OS implementation.
 
 ---
 
@@ -167,6 +171,7 @@ A tracks per-entity. Multiple instances are independent. Slot count tracks node 
 **Ruling:** A activation and A balance are separate events. A can activate in a tilted state. The tilt carries diagnostic information — specifically about armor status (whose false self is still intact). A balanced A emerges through story arc, not at first activation.
 
 **A maturation model (Veritas evidence):**
+
 - Ch.3 tunnel: A(Cassie+Valeria) — tilted; Valeria's armor intact, Cassie's armor gone. Opening statement.
 - Ch.8: A(Valeria+Thorne) — balanced; both parties holding their poles honestly.
 - Ch.8: A(Valeria+self) — synthesized; Valeria holds the pragmatic pole by confessing it was always in her.
@@ -189,9 +194,7 @@ A tracks per-entity. Multiple instances are independent. Slot count tracks node 
 
 ### Trace 001 — Veritas, Prologue + Chapter 1 *(from v0.3)*
 
-*(Summary table preserved — see v0.3 for full record)*
-
-All 7 node definitions held. Z fired naturally in the boardroom. H Persistence and A Granularity rulings issued.
+Summary table in v0.3. All 7 node definitions held. Z fired naturally in the boardroom. H Persistence and A Granularity rulings issued.
 
 ### Trace 002 — Veritas, Chapter 2
 
