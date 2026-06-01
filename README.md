@@ -308,7 +308,7 @@ Two architectural rulings issued from the trace:
 - **H Persistence Ruling:** When a story's premise makes the Narrative Boundary permanent, H is elevated to floor status and does not consume an activation slot. Applies to Veritas.
 - **A Granularity Ruling:** Thematic Symmetry tracks per-entity (institutional, personal, relational), not per-story. Multiple instances are independent — one can deactivate while others persist.
 
-Full spec: [`spec/hexagonal_blueprint_v03.md`](spec/hexagonal_blueprint_v03.md)
+Full spec: [`spec/hexagonal_blueprint_v04.md`](spec/hexagonal_blueprint_v04.md)
 
 ---
 
@@ -319,7 +319,8 @@ Full spec: [`spec/hexagonal_blueprint_v03.md`](spec/hexagonal_blueprint_v03.md)
 | M1 | Wander Alarm — North Star declaration + violation detection | ✅ Complete |
 | M2 | Float tension system, IDP, Sandbox Commit Logic | ✅ Complete |
 | Hex v0.3 | Hexagonal Blueprint — node definitions locked, Ch.1 trace validated | ✅ Complete |
-| Hex v1.0 | Node transition prototype (Jupyter → code) after 3 story scenario traces | In Progress |
+| Hex v0.4 | Ch.2 + Ch.3 traced — S/Z/A definitions refined, 6 rulings issued | ✅ Complete |
+| Hex v1.0 | Node transition prototype (Jupyter → code) — 3 traces complete, gate open | In Progress |
 | M3 | Living Graph Database — story bible integration (The Architect) | Planned |
 | M4 | Real-time drafting monitor — Live Vibe-Checks (The Pilot) | Planned |
 | M5 | Developmental Analysis + Voice Audit (The Editor) | Planned |
