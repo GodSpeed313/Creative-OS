@@ -186,6 +186,8 @@ A tracks per-entity. Multiple instances are independent. Slot count tracks node 
 
 **Proposed:** A sibling marker — working name *unified pursuit* — that activates when S deactivates and a shared goal remains. Distinct from S (which tracks the act of merging) and from G (which is full resolution).
 
+**Prototype decision:** Null-gap approach. When S deactivates with a shared goal still active, the engine logs a gap entry — no marker fires, the absence is recorded. This keeps the prototype honest about what the spec has not decided, generates real usage data, and lets consistent appearances across traces drive formalization. If unified pursuit appears in three traces the same way S and τ did, Ruling 6.6 closes as confirmed. If it does not appear consistently, Ruling 6.6 closes as theoretical.
+
 **Status:** ❌ Open — not encoded. Requires a story scenario that isolates unified pursuit as a distinct state before formalizing. Do not add to grammar until validated.
 
 ---
