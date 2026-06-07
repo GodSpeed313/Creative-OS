@@ -1,10 +1,10 @@
 # HEXAGONAL BLUEPRINT
 Node Validation & Mapping Document
 Creative OS — Standalone Implementation
-Version 0.5 — Node D Formalized — Ruling 6.6 Resolved
+Version 0.6 — Ruling 6.7 (Hum-Compelled Disclosure) | Ch.4–5 traces corrected | Trace 006 added
 
-**Changes from v0.4:**
-Node D (Unified Pursuit) added — 8th node, confirmed across 3 scenarios | Ruling 6.6 closed as formalized | Engine auto-activates D at S-deactivation-with-active-goal | δ logged (not Z) for thematic chapter-close beats — Z variant watch opened | Traces 004 and 005 added
+**Changes from v0.5:**
+Ruling 6.7 issued: Hum-compelled disclosure is physics-consistent; physics checks conviction not concealment | τ agency requirement added: Hum-compelled transitions are not τ | Traces 004–005 corrected (Z anchors, manuscript defects 5.1/5.2 logged, Miller terminal Z) | Trace 006 added (Ch.6 — D persists across POV, no new nodes, Ruling 6.7 clean) | Sustained α at 2 instances; Z variant watch at 2 instances
 
 ---
 
@@ -45,7 +45,7 @@ A can activate in a tilted state. Activation and balance are separate events. Re
 
 Z fires in three modes: **Complete**, **Truncated**, **Partial/External**. See Ruling 6.4 for deferral-resolution clause.
 
-**Z variant watch (new in v0.5):** At the close of Ch.5 (*"the truth didn't just hurt. It cleansed."*), the beat felt structurally adjacent to Z but was logged as δ. Reason: Z fires at character-level identity-collapse, not at thematic-statement moments. A thematic Z would require its own definition, rules, and firing conditions — one instance does not earn a new mode. Logged as δ. Watch for two more appearances of the same pattern (narration landing thesis before the story continues) in Ch.6–8. If it appears twice more in the same way, this becomes a ruling.
+**Z variant watch (updated in v0.6):** Thematic chapter-close beats logged as δ — two confirmed instances: Ch.3 tunnel close and Ch.5 (*"the truth didn't just hurt. It cleansed."*). Pattern: narration landing thesis before story continues. Z fires at character-level identity-collapse, not at thematic-statement moments. One more instance = ruling threshold met. Watch Ch.7–13.
 
 ### Node Notes — D
 
@@ -74,6 +74,8 @@ D deactivates when G fires (all threads resolved) or F fires (resolution in sigh
 | γ | Generative Marker | A new state is being created rather than transitioned into | Assigned | 🔒 Assigned |
 
 ↳ τ promoted to 🔒 Locked: two independent confirmations (Ch.1 boardroom — professional confrontation; Ch.3 drive — kinetic action sequence). Both were approach sequences; watch for τ in retreat or aftermath contexts to confirm the definition is general.
+
+**τ agency note (new in v0.6):** τ requires character agency. Hum-compelled state transitions do not qualify — the character lacks agency in the transition. Thorne's commander→confessor shift (Ch.6) is the test case: real and timebound, but compelled not earned. It does not falsify the τ–approach-sequence coupling. τ remains at 4/4 approach sequences. The hunt for a non-approach earned transition continues through Ch.7–13.
 
 **Sustained α observation (new in v0.5):** Ch.4 stealth/escape sequence is the longest sustained α in the traces — multiple scene beats with no δ landing. If this pattern appears again, it may warrant marker distinction. Not a ruling yet; one instance.
 
@@ -117,6 +119,20 @@ A can activate tilted. Tilt carries armor-status information. Track maturation a
 
 **Null-gap approach (from v0.4):** The engine's post_s_gap logging is replaced by D auto-activation. The gap was the evidence base; D is the formalization.
 
+### Ruling 6.7 — Hum-Compelled Disclosure *(confirmed v0.6)*
+
+**Issued:** Veritas Ch.6 trace
+
+**Ruling:** The Hum compels **disclosure**, not **conviction**. Physics-integrity checks whether a character's values and operative belief hold — not whether hidden facts, costs, or fears surface. A character who reveals motivations, regrets, or costs under Hum compulsion is not in physics violation if their underlying conviction remains intact. Drift fires only when values soften; not when concealment fails.
+
+**Test:** Does the character's core thesis — what they believe they would do and why — change? If yes: PHYSICS_VIOLATION or IDP. If no: forced disclosure, physics-consistent.
+
+**Evidence:** Thorne's Ch.6 confession to Chen. He names Marcus Reeves, admits fear as his motivation, discloses the full cost of the trials. Conviction intact throughout: *"the Hum is finally doing what I wanted it to do"* / *"I knew it would hurt them. I did it anyway."* He walks into the hallway to face consequence — not to recant the act. Disclosure of cost ≠ change of conviction. Ch.6 is clean under this ruling.
+
+**Corollary for τ:** Hum-compelled state transitions do not qualify as τ. τ marks duration-dependent earned transitions — state changes requiring character agency across a full scene. Compelled transitions are a distinct category: forced disclosure events. They are neither τ nor PHYSICS_VIOLATION.
+
+**M3 pre-load:** The Thorne shelter letter (*"reads too kind relative to physics ceiling"*) is the other pole. Ch.6 confession = forced disclosure (physics-consistent). If the shelter letter shows softened conviction — recanting the act, not naming costs — that is value-drift (IDP territory). Ruling 6.7 settles the test before M3.
+
 ---
 
 ## Section 7: Story Scenario Traces
@@ -133,31 +149,59 @@ Z fired naturally in apartment (personal coherence check). No Z in office (no fa
 
 S fully activated and deactivated. Z truncated at bank confrontation (mob invades mid-confirmation). D auto-fires at ch3.mob_invades. A(Cassie+Valeria) activates tilted in tunnel. 3-node limit at bank held.
 
-### Trace 004 — Veritas, Chapter 4 *(v0.5)*
+### Trace 004 — Veritas, Chapter 4 *(revised v0.6)*
 
-**Date:** 2026-06-04
-**Result:** Corridor chapter. Slot count 2 throughout (A + D). No Z fired. No new nodes activated. Longest sustained α in traces (stealth/escape sequence). Thorne named — α fires toward Ch.5, not Z. Post-S D persists as structural engine.
-
-| Scene | Nodes Active | Markers | Slots |
-| --- | --- | --- | --- |
-| All scenes | A, D | α, δ, σ (variable) | 2 |
-
-### Trace 005 — Veritas, Chapter 5 *(v0.5)*
-
-**Date:** 2026-06-04
-**Result:** Z Partial/External fires and completes in-scene at trailer (Toughbook). One deferred Z (Ch.3 Truncated, Valeria) still open. γ fires at Truth Bomb. Chapter close logged as δ (not Z — thematic statement, not character-level collapse). D persists throughout.
+**Date:** 2026-06-06
+**Result:** Z Complete (Valeria) fires in-scene at foreman's trailer — Thorne identity collapse. Peak slot 3. Sustained α through City Hall Station sequence (first sustained-α instance). τ at chandelier escape (3rd approach instance). Manuscript Defect 5.1 noted: acoustic maps + St. Jude's also staged in Ch.5 (stitch artifact); traced as-written.
 
 | Scene | Nodes Active | Markers | Slots |
 | --- | --- | --- | --- |
-| Miller breakdown + trailer found | A, D | σ | 2 |
-| Toughbook — Z fires (Partial/External) | A, D, Z | α | 3 |
-| Z completes in-scene | A, D | δ, Z resolves | 2 |
+| Tunnel — PSH confession | A, D | α, σ | 2 |
+| City Hall Station — catatonic victims, Cleaners | A, D | σ peak, sustained α | 2 |
+| Chandelier escape | A, D | τ (3rd instance — approach) | 2 |
+| Foreman's trailer — Thorne.pdf | A, D, Z | Z fires (Complete, entity=Valeria) | 3 |
+| Z resolves in-scene | A, D | δ | 2 |
+| Iron door breached — flee | A, D | σ | 2 |
+
+**Manuscript defects logged:** Defect 5.1 (scene duplication — acoustic maps + St. Jude's also staged in Ch.5 as-written); Defect 5.2 (kinetic break at Ch.4→Ch.5 seam — WANDER_ALARM_KINETIC_DEVIATION-class). Recommended fix: collapse dual Toughbook staging into Ch.4.
+
+### Trace 005 — Veritas, Chapter 5 *(revised v0.6)*
+
+**Date:** 2026-06-06
+**Result:** Miller Z Complete/terminal at crane — first terminal Z in corpus. D-composition event (Miller exits merged unit; D persists with Valeria+Cassie). Acoustic maps γ and St. Jude's δ in Ch.5 as-written (Defect 5.1). γ fires at Truth Bomb. Z variant watch: 2nd instance at chapter close.
+
+| Scene | Nodes Active | Markers | Slots |
+| --- | --- | --- | --- |
+| Construction site exterior | A, D | σ | 2 |
+| Acoustic maps [Defect 5.1 — as-written] | A, D | γ | 2 |
+| St. Jude's logs [Defect 5.1 — as-written] | A, D | δ | 2 |
 | Helicopter — flashbangs | A, D | σ peak | 2 |
-| Crane — Miller's death | A, D | δ | 2 |
-| Truth Bomb | A, D | γ, δ | 2 |
+| Crane climb | A, D | τ (4th instance — approach) | 2 |
+| Crane — Miller Z fires (Complete, terminal) | A, D, Z | Z fires | 3 |
+| Miller falls — Z resolves | A, D | δ (terminal) | 2 |
+| Truth Bomb | A, D | γ | 2 |
 | Chapter close | A, D | δ | 2 |
 
-**Z variant watch note:** Chapter close beat logged as δ. One instance of thematic-level coherence-statement. Watching for pattern.
+**Z variant watch note:** 2nd instance (Ch.3 tunnel close + Ch.5 close). One more = ruling threshold.
+**Terminal Z flag:** First in corpus (entity=Miller). Sub-mode ruling held — two more instances needed.
+**D-composition event #1:** Miller exits merged unit. D persists with Valeria+Cassie.
+
+### Trace 006 — Veritas, Chapter 6 *(v0.6)*
+
+**Date:** 2026-06-06
+**Result:** D persists across Thorne POV shift — confirmed. A(Valeria+Thorne) deferred to Ch.8 (phone call is α, not A — entity-level co-location not met). No Z for Thorne — St. Jude's memory is flashback/contextualization, not in-scene identity collapse. F does not fire. No new nodes. Slot count 2 throughout. Ruling 6.7 applied: Thorne confession = forced disclosure, physics-consistent.
+
+| Scene | Nodes Active | Markers | Slots |
+| --- | --- | --- | --- |
+| Aegis Suite opens — Thorne POV | A, D | δ (POV shift) | 2 |
+| Knox badge + Shadow Ledger broadcast | A, D | δ | 2 |
+| Chen refuses Omega-Seven | A, D | δ (command structure fractures) | 2 |
+| Technician cascade — headsets off, confessions | A, D | sustained α (2nd instance) | 2 |
+| St. Jude's memory — Marcus Reeves | A, D | σ | 2 |
+| Valeria's call (breached channel) | A, D | α (toward A(Valeria+Thorne)) | 2 |
+| Thorne steps into hallway | A, D | δ (commander → confessor, Hum-compelled) | 2 |
+
+**Key rulings confirmed:** D persists across POV shift. A(Valeria+Thorne) fires at Ch.8. Thorne's confession is forced disclosure (Ruling 6.7) — not PHYSICS_VIOLATION. Commander→confessor shift is Hum-compelled, not τ (Ruling 6.7 corollary). Sustained α: 2nd instance — one more = ruling watch.
 
 ---
 
@@ -171,18 +215,22 @@ S fully activated and deactivated. Z truncated at bank confrontation (mob invade
 | A activation vs balance? | Resolved — Ruling 6.5. |
 | S deactivation | Resolved — Ruling 6.3. |
 | Unified pursuit / post-S gap? | Resolved — Ruling 6.6. Node D formalized. |
-| Sustained α — distinct marker? | Open. One instance (Ch.4 stealth). Watch for second. |
-| Z variant — thematic statements? | Open. One instance (Ch.5 close). Two more needed for ruling. |
+| Sustained α — distinct marker? | Open. Two instances (Ch.4 City Hall, Ch.6 technician cascade). One more = ruling. |
+| Z variant — thematic statements? | Open. Two instances (Ch.3 tunnel close, Ch.5 close). One more = ruling. |
 | D deactivation in non-Veritas projects? | Open. Only confirmed at G/F. Other deactivation conditions may emerge. |
+| Terminal Z sub-mode? | Open. One instance (Miller, Ch.5). Two more instances needed before ruling. |
+| Hum-compelled disclosure vs. physics? | Resolved — Ruling 6.7. Compelled = disclosure not conviction. τ requires agency. |
+| D composition changes? | Open. One event (Miller exits, Ch.5). Does D require minimum membership? |
 
 ---
 
 ## Next Steps
 
 - ~~Traces 001–003 complete, prototype running~~ **DONE**
-- ~~Trace 004 (Ch.4) — corridor chapter confirmed~~ **DONE**
-- ~~Trace 005 (Ch.5) — Partial/External Z, D persists, γ at Truth Bomb~~ **DONE**
-- **Trace 006 — Ch.6 (Eye of the Storm, Thorne POV).** First chapter primarily from Thorne's perspective. Watch: does D persist without Valeria/Cassie as POV characters? Does A(Valeria+Thorne) activate here or only in Ch.8?
-- **Trace 007 — Ch.7 (Fallout of Angels).** Truth Bomb aftermath. Watch: does F activate as threads approach resolution? Does Z fire for Cassie (she's been Z-free since Ch.2)?
-- **Trace 008 — Ch.8 (Doctrine of Silence).** The deferred Valeria Z resolves here. Confirm Ruling 6.4 deferral-resolution clause fires correctly. Watch A(Valeria+Thorne) → balanced.
+- ~~Trace 004 (Ch.4) — revised v0.6: Z Complete (Valeria), Defects 5.1/5.2 logged~~ **DONE**
+- ~~Trace 005 (Ch.5) — revised v0.6: Miller terminal Z, D-composition event, Z variant 2/3~~ **DONE**
+- ~~Trace 006 (Ch.6) — D persists across POV, Ruling 6.7 confirmed, no new nodes~~ **DONE**
+- **Trace 007 — Ch.7 (Power, Parse, Path).** Tribune Building, Rachel Díaz, consortium files decrypted. Watch: F activation (story approaching resolution)? Z for Cassie (Z-free since Ch.2)? Third τ instance (hunt for non-approach)? Third sustained α instance (ruling threshold)?
+- **Trace 008 — Ch.8 (The Consortium).** Aegis Suite confrontation. A(Valeria+Thorne) activates. Deferred Valeria Z (Truncated, Ch.3) resolves here — Ruling 6.4 deferral clause. Watch Thorne's confession under Ruling 6.7.
+- **Traces 009–014** — Ch.9 through Ch.14 (Judgment, Spread, Adaptation, Remaining Names, New Order, Living with Truth). G and F activation, A(Cassie+Valeria) maturation arc, extended aftermath.
 - **Grammar encoding** — after all chapter traces complete and prototype validates the full arc.
