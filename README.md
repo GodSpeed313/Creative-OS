@@ -320,7 +320,7 @@ Full spec: [`spec/hexagonal_blueprint_v04.md`](spec/hexagonal_blueprint_v04.md)
 | M2 | Float tension system, IDP, Sandbox Commit Logic | ✅ Complete |
 | Hex v0.3 | Hexagonal Blueprint — node definitions locked, Ch.1 trace validated | ✅ Complete |
 | Hex v0.4 | Ch.2 + Ch.3 traced — S/Z/A definitions refined, 6 rulings issued | ✅ Complete |
-| Hex v1.0 | Node transition prototype (Jupyter → code) — 3 traces complete, gate open | In Progress |
+| Hex v0.8 | Node transition prototype (Jupyter → code) — Traces 001-008 complete (Ch.1-8), 10 rulings issued, zero Lore Creep violations | Paused — no Ch.9 manuscript |
 | M3 | Living Graph Database — story bible integration (The Architect) | Planned |
 | M4 | Real-time drafting monitor — Live Vibe-Checks (The Pilot) | Planned |
 | M5 | Developmental Analysis + Voice Audit (The Editor) | Planned |
