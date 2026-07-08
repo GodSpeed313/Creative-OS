@@ -1,9 +1,12 @@
 # HEXAGONAL BLUEPRINT
 Node Validation & Mapping Document
 Creative OS — Standalone Implementation
-Version 0.11 — Dogfood stress test complete through the alt-branch Ch.12 climax (Section 9)
+Version 0.12 — Dogfood stress test complete through the alt-branch's actual ending (Section 9)
 
-**Changes from v0.9:**
+**Changes from v0.11:**
+Traced the rest of the alt-branch: Ch.13's remainder, all of Ch.14, and its epilogue — the manuscript's actual ending. Cassie fires her first Z in either branch (ends her Z-free-since-Ch.2 streak). Tested whether G fires at the literal last page of a finished 14-chapter-plus-epilogue story — it does not, because the ending is deliberately ambiguous rather than resolved; logged as a new open question (the node set may not yet cover thematically-open endings). Also self-caught and corrected a trace-authoring mistake: Valeria's Ch.12 Z was mistagged `Truncated` instead of `Complete`, which left it stuck open in the deferred-Z list since `deactivate()` doesn't clear deferrals — fixed and re-traced, noted rather than quietly patched.
+
+**Changes from v0.9 → v0.11 (Section 9, first two passes):**
 Engine extended with `flag_physics_violation()` on `NodeEngine`, mirroring the existing auto-detected Lore Creep mechanism — Ruling 6.7 defined a conviction-change test in prose from the start, but nothing before now let the engine formally *record* a violation of it. Used it once, for real: the other manuscript draft's own Ch.7–8 ("The Fallout of Angels" / "Doctrine of Silence"), forked at the shared Ch.6, reintroduces Thorne in a fully-recommanded, cold operational state with no on-page event earning a reversion from the confessor state Ch.6 (already traced, shared, committed as Trace 006) left him in. First formally-recorded PHYSICS_VIOLATION in the corpus. Stress test then continued through this branch's own Ch.9–13, including its Ch.12 climax (the densest scene in either draft) — still zero Lore Creep, with a traceable reason why (Z brackets neatly around the decisive-action beat, never overlapping another node-level event). A(Valeria+Thorne) activates in Ch.12 and structurally deactivates in Ch.13 — contrast the canonical branch, where it's left open through Ch.9. See Section 9.
 
 **Changes from v0.8 → v0.9 (Trace 009 Part 1):**
@@ -332,6 +335,8 @@ S fully activated and deactivated. Z truncated at bank confrontation (mob invade
 | τ — non-approach earned transition? | Resolved — Ruling 6.10. Confirmed via Thorne's Ch.8 confession arc. |
 | A(Valeria+Thorne) resolution? | Open. Thorne's fate is confirmed (alive, permanent witness) as of Ch.9 Part 1 — a structural/crowd verdict, not a personal resolution. The tension between Valeria and Thorne specifically remains unaddressed. Still watching. |
 | Is the Hum's spread permanent? | Open — this is the exact question Ch.9 cuts off on. Thorne told Valeria/Rachel privately in Ch.7 that it's self-sustaining/uncontrollable; whether he says so publicly here is unwritten. |
+| Does the node set cover a deliberately-ambiguous ending? | Open — new, from Section 9. Neither F nor G fits a story that is fully finished but ends on irresolution as its own narrative choice (the alt-branch's actual ending). May need a 9th node, or a ruling on tracing thematically-open endings. |
+| Cassie's Z-free streak | Ended in the alt-branch (Ch.13, first Z — "it stayed"), held through Ch.9 in the canonical branch. Branch-specific, not a contradiction — different manuscripts, different outcomes are expected. |
 
 ---
 
@@ -420,6 +425,51 @@ resolves in one scene. Not firing it: F requires being down to exactly *one* rem
 thread, and per this branch's own Ch.13–14, multiple threads stay open past this point
 (Thorne's ultimate moral reckoning, the global-scale aftermath, a "living with truth"
 thematic arc). Logged as an open note rather than forced.
+
+**Self-caught modeling error, corrected.** The first pass of this trace activated
+Valeria's Ch.12 Z as `Truncated` (implying deferral, like her Ch.3 bank Z). That was wrong:
+Truncated means cut short by an *external* interruption, but this one plays out fully
+in-scene and resolves through her own decisive action (firing at the dampeners) rather
+than being cut off. Because `deactivate()` doesn't clear the deferred-Z list — only
+`resolve_deferred_z()` does — the mistagged Truncated entry sat open forever, surfacing as
+a second permanently-open deferred Z in the corpus summary. Caught on review, corrected to
+`Complete` (the accurate mode), re-traced. Noted here rather than quietly fixed, since a
+trace-authoring mistake is exactly the kind of thing this whole project exists to catch —
+including in its own trace-writer.
+
+**Through Ch.13's remainder and all of Ch.14 + its epilogue — the manuscript's actual
+ending.** Backfilled two Ch.13 beats that precede the already-traced "they leave" moment:
+the local Hum going silent (γ — but local only; Ch.14 confirms the global spread
+continues), and Cassie's own reaction to what the collision did to her ("I can still see
+them... it stayed") — read as her **first Z in either branch**, ending the Z-free-since-
+Ch.2 streak that had held all the way through the canonical branch's Ch.9. Valeria herself
+becomes permanently "skinless" (feels others' guilt/fear directly) — tagged δ, not Z: this
+is an external condition imposed on her, not a pause to confirm her own coherence, and
+conflating the two would blur a distinction the framework depends on. Ch.14 shows the
+global spread directly on-page for the first time in either branch (a London newsroom,
+live) and introduces "the Vow" — a worldwide faction of the permanently self-silenced.
+Two more chapter-closes land the same thematic-statement pattern from Ruling 6.9, this
+time as **cross-branch corroboration** — a pattern confirmed independently in two
+different continuations of the same manuscript is stronger evidence than repeated
+instances within just one.
+
+**Does G fire at the actual ending?** This is the literal last page of a complete,
+14-chapter-plus-epilogue manuscript — a nameless child born after the Inversion finds
+Thomas Knox's badge, feels nothing from it (to him it's an inert relic of an incomprehensible
+old world), and the story closes on a distant, solitary figure (almost certainly Valeria)
+where "the air seemed to shimmer... as if the truth was trying to find a way to become a
+lie again." If G (Narrative Coherence — all threads resolve, arcs land, thematic intent
+fulfilled) were ever going to fire, it would be here. **It does not.** Thorne's ultimate
+fate is never revisited past Ch.13. The Vow/Silent Colonies social order is explicitly
+*ongoing and adapting*, not landed ("a civilization of the Wary... learning to live in the
+Light... building new masks, new distances" — a process, not a resolution). And the final
+image is deliberately ambiguous — the text itself calls that ambiguity "the only hope
+left," not a resolved thesis.
+
+**New open question for the framework itself** (not a manuscript defect — a gap in node
+coverage): neither F nor G describes a story that is fully *finished* but deliberately ends
+on irresolution as its own narrative choice, rather than approaching or reaching coherence.
+Logged in Section 8 below rather than forced into an ill-fitting node.
 
 **Conclusion.** This is the dogfood-gate evidence that was missing: not "the manuscript
 stayed clean," but "the tool caught something wrong when given something wrong to catch"
