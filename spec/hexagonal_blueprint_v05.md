@@ -1,17 +1,10 @@
 # HEXAGONAL BLUEPRINT
 Node Validation & Mapping Document
 Creative OS — Standalone Implementation
-Version 0.10 — Dogfood stress test: first PHYSICS_VIOLATION formally recorded (Section 9)
+Version 0.11 — Dogfood stress test complete through the alt-branch Ch.12 climax (Section 9)
 
 **Changes from v0.9:**
-Engine extended with `flag_physics_violation()` on `NodeEngine`, mirroring the existing
-auto-detected Lore Creep mechanism — Ruling 6.7 defined a conviction-change test in prose
-from the start, but nothing before now let the engine formally *record* a violation of it.
-Used it once, for real: the other manuscript draft's own Ch.7–8 ("The Fallout of Angels" /
-"Doctrine of Silence"), forked at the shared Ch.6, reintroduces Thorne in a fully-recommanded,
-cold operational state with no on-page event earning a reversion from the confessor state
-Ch.6 (already traced, shared, committed as Trace 006) left him in. First formally-recorded
-PHYSICS_VIOLATION in the corpus. See Section 9.
+Engine extended with `flag_physics_violation()` on `NodeEngine`, mirroring the existing auto-detected Lore Creep mechanism — Ruling 6.7 defined a conviction-change test in prose from the start, but nothing before now let the engine formally *record* a violation of it. Used it once, for real: the other manuscript draft's own Ch.7–8 ("The Fallout of Angels" / "Doctrine of Silence"), forked at the shared Ch.6, reintroduces Thorne in a fully-recommanded, cold operational state with no on-page event earning a reversion from the confessor state Ch.6 (already traced, shared, committed as Trace 006) left him in. First formally-recorded PHYSICS_VIOLATION in the corpus. Stress test then continued through this branch's own Ch.9–13, including its Ch.12 climax (the densest scene in either draft) — still zero Lore Creep, with a traceable reason why (Z brackets neatly around the decisive-action beat, never overlapping another node-level event). A(Valeria+Thorne) activates in Ch.12 and structurally deactivates in Ch.13 — contrast the canonical branch, where it's left open through Ch.9. See Section 9.
 
 **Changes from v0.8 → v0.9 (Trace 009 Part 1):**
 Trace 009 Part 1 added: Diane Foster (the Ch.7/Ch.8 checkpoint woman) named; Thorne's Ch.8 ambiguous fate resolves to CONFIRMED ALIVE, sentenced as a permanent witness/pariah rather than killed by the crowd — closes that half of the open question, but A(Valeria+Thorne) itself stays active/unresolved (a crowd verdict about Thorne isn't a personal resolution between him and Valeria). F still does not fire. The manuscript itself cuts off mid-scene, before Thorne answers whether the Hum's spread is permanent — no node fires on an answer that doesn't exist yet. Awaiting Part 2 before this trace or the corpus summary can be called complete for Ch.9.
@@ -393,15 +386,47 @@ contradicts: ch6.thorne_into_hallway (Trace 006) -- commander-to-confessor
 worldbuilding/naming inconsistency, logged separately since it's not a character-conviction
 question.
 
-**No Lore Creep violations** fired in this pass (peak slot count stayed at 2 — the
-promising node-density moment flagged earlier, the Ch.12 Acoustic Well climax, wasn't
-traced in this stress test; tracing further into this branch is a candidate for actually
-triggering the 3-slot limit for the first time, if that validation is wanted next).
+**Continued through the Ch.12 climax — still zero Lore Creep, and now we know why.**
+Extended the same fork through this branch's own Ch.9 (a bystander vignette, no tracked
+entity on-page — skipped cleanly), Ch.10–11 (build toward the Federal Building, two
+chapter-closes explicitly logged as *not* matching the Ruling 6.9 thematic pattern, keeping
+that ruling's evidence honest), and Ch.12 ("The Heart of the Well") — the densest scene in
+either branch. A(Valeria+Thorne) activates here for the first time in this branch (physical
+co-location finally met), stacked with Z firing mid-scene for Valeria (Truncated — Thorne
+psychologically manipulating her into a spiral, surfacing a previously-unestablished secret
+about a boy she killed and never reported — logged as a soft manuscript observation,
+distinct from the Thorne reversal). Peak slot count hit exactly 3 (A+D+Z) — the same
+ceiling as every other Z-firing scene in the whole corpus — and never exceeded.
+
+Traced *why* rather than assuming it: Z activates when Thorne's manipulation begins and
+deactivates the instant Valeria acts (she shoots the acoustic dampeners, not Thorne —
+rejecting his manipulation through a chosen action rather than being resolved by an
+external cutoff). Nothing else asks for a node-level slot while Z is open. Even under
+deliberate stress-testing at the densest scene either draft contains, the 3-slot discipline
+holds — because the author sequenced the identity-crisis to resolve before anything else
+needed the room. A genuine Lore Creep may require a scene where two node-level events
+overlap *without* an intervening resolution — which this climax, dense as it is, does not
+actually contain. That is a real finding, not a null result.
+
+A(Valeria+Thorne) later **deactivates** in this branch's Ch.13 — Thorne defeated, sitting
+in the wreckage, Valeria and Cassie simply walk away ("nothing left to say to a man who
+had been outlived by his own atrocity"). Structural resolution, tension no longer
+generative. Contrast the canonical branch, where this same node is explicitly left open
+through Ch.9.
+
+**F candidacy, still not fired.** This climax is the strongest F candidate encountered in
+either branch — the central pursuit-thread (stop Thorne, stop Phase 5, expose the truth)
+resolves in one scene. Not firing it: F requires being down to exactly *one* remaining
+thread, and per this branch's own Ch.13–14, multiple threads stay open past this point
+(Thorne's ultimate moral reckoning, the global-scale aftermath, a "living with truth"
+thematic arc). Logged as an open note rather than forced.
 
 **Conclusion.** This is the dogfood-gate evidence that was missing: not "the manuscript
-stayed clean," but "the tool caught something wrong when given something wrong to catch,"
-using its own already-established rules (Ruling 6.7), applied mechanically for the first
-time rather than only narrated about.
+stayed clean," but "the tool caught something wrong when given something wrong to catch"
+(the physics violation), *and* "the tool correctly did not manufacture a violation where
+none existed, with a traceable reason why" (the Ch.12 climax). Both results used the
+system's own already-established rules, applied mechanically rather than only narrated
+about.
 
 ---
 

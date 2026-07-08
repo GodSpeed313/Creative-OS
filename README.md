@@ -321,7 +321,7 @@ Full spec: [`spec/hexagonal_blueprint_v04.md`](spec/hexagonal_blueprint_v04.md)
 | M2 | Float tension system, IDP, Sandbox Commit Logic | ✅ Complete |
 | Hex v0.3 | Hexagonal Blueprint — node definitions locked, Ch.1 trace validated | ✅ Complete |
 | Hex v0.4 | Ch.2 + Ch.3 traced — S/Z/A definitions refined, 6 rulings issued | ✅ Complete |
-| Hex v0.10 | Node transition prototype (Jupyter → code) — Traces 001-008 complete (Ch.1-8) + Trace 009 Part 1 (Ch.9, in progress), 10 rulings issued, first PHYSICS_VIOLATION formally caught via an alternate-branch dogfood stress test | In Progress — Ch.9 manuscript incomplete |
+| Hex v0.11 | Node transition prototype (Jupyter → code) — Traces 001-008 complete (Ch.1-8) + Trace 009 Part 1 (Ch.9, in progress), 10 rulings issued, first PHYSICS_VIOLATION formally caught via an alternate-branch dogfood stress test (through its Ch.12 climax — zero Lore Creep, with a traceable reason why) | In Progress — Ch.9 manuscript incomplete |
 | M3 | Living Graph Database — story bible integration (The Architect) | Planned |
 | M4 | Real-time drafting monitor — Live Vibe-Checks (The Pilot) | Planned |
 | M5 | Developmental Analysis + Voice Audit (The Editor) | Planned |
