@@ -1,9 +1,12 @@
 # HEXAGONAL BLUEPRINT
 Node Validation & Mapping Document
 Creative OS — Standalone Implementation
-Version 0.8 — Ruling 6.10 (τ beyond approach sequences) | Trace 008 added | Thorne's first Z | Valeria's Ch.3 deferred Z resolves
+Version 0.9 — Trace 009 (Part 1, Ch.9) added, MANUSCRIPT INCOMPLETE — ends mid-cliffhanger
 
-**Changes from v0.7:**
+**Changes from v0.8:**
+Trace 009 Part 1 added: Diane Foster (the Ch.7/Ch.8 checkpoint woman) named; Thorne's Ch.8 ambiguous fate resolves to CONFIRMED ALIVE, sentenced as a permanent witness/pariah rather than killed by the crowd — closes that half of the open question, but A(Valeria+Thorne) itself stays active/unresolved (a crowd verdict about Thorne isn't a personal resolution between him and Valeria). F still does not fire. The manuscript itself cuts off mid-scene, before Thorne answers whether the Hum's spread is permanent — no node fires on an answer that doesn't exist yet. Awaiting Part 2 before this trace or the corpus summary can be called complete for Ch.9.
+
+**Changes from v0.7 → v0.8 (Trace 008):**
 Ruling 6.10 issued: τ confirmed to fire on a non-approach, agency-driven transition (Thorne's confession arc, Ch.8) — resolves the hunt open since Ch.5 | Trace 008 added (Ch.8 — A(Valeria+Thorne) finally activates on physical co-location; Thorne's first personal Z fires, Complete but fate left ambiguous, not terminal; Valeria's Truncated Z from Ch.3 resolves via Ruling 6.4's deferral clause; D-composition event #3 — a split, not exit or addition; F still does not fire; Manuscript Defect 8.1 logged — Cassie present in the Aegis Suite with no described entry, contradicting Ch.7's stated headcount)
 
 ---
@@ -287,6 +290,24 @@ S fully activated and deactivated. Z truncated at bank confrontation (mob invade
 
 **Key rulings confirmed/issued:** Ruling 6.10 (τ beyond approach sequences — hunt resolved). A(Valeria+Thorne) activates. Thorne's first Z — Complete, not terminal, fate ambiguous. Valeria's Ch.3 deferred Z resolves — zero deferred Z remain. D-composition event #3 (split). F still does not fire. Manuscript Defect 8.1 logged.
 
+### Trace 009 (Part 1) — Veritas, Chapter 9: The Judgment *(v0.9 — MANUSCRIPT INCOMPLETE)*
+
+**Date:** 2026-07-08
+**Status:** Traced fragment only. The chapter as provided ends mid-scene — "Thorne looked at the man for a long moment before he answered, and Valeria understood... that whatever came out of his mouth next was going to matter more than everything he'd already confessed." No text exists past this point. Do not treat Ch.9 as complete or fold it into a Ch.1–9 corpus summary until Part 2 arrives.
+
+**Result:** D confirmed fully reconsolidated entering this chapter (Rachel + Cassie returned to the Aegis Suite window by Ch.8's actual close). The Ch.7/Ch.8 checkpoint woman is named for the first time — **Diane Foster**, a former public defender. Diane rules on Thorne's fate before the crowd: he lives, becomes a mandatory witness against the rest of the consortium, and is released once exhausted of value — "not forgiveness... a sentence with no end date." This **confirms Thorne's Ch.8 ambiguous fate as non-terminal** (he is explicitly not killed), closing half of the open "A(Valeria+Thorne) resolution" question — but the activation itself does not deactivate: a crowd verdict about Thorne is a structural judgment, not a personal resolution between him and Valeria, so the tension stays open. F does not fire — Thorne's individual fate resolves as its own plot thread, but the global Hum-spread scale and the rest of the consortium remain untouched, and the fragment's own final beat is an unanswered question about whether the Hum is even permanent. No new node types activate or deactivate; slots hold at 2 throughout.
+
+| Scene | Nodes Active | Markers | Slots |
+| --- | --- | --- | --- |
+| Window — decision to descend via stairs | A, D | δ/σ | 2 |
+| Plaza — Diane Foster named (recurring Ch.7/Ch.8 checkpoint woman) | A, D | σ | 2 |
+| Diane frames the question: what do we do with a confessed man? | A, D | σ | 2 |
+| Crowd splits — "Kill him!" vs. "We're not murderers!" | A, D | σ (peak) | 2 |
+| Diane's ruling — Thorne lives as permanent witness/pariah | A, D | δ (Thorne's fate confirmed non-terminal) | 2 |
+| Permanence question posed to Thorne — **manuscript cuts off** | A, D | σ (unresolved cliffhanger) | 2 |
+
+**Key findings:** Diane Foster named. Thorne's fate confirmed alive/non-terminal (not killed) — A(Valeria+Thorne) itself remains open regardless. F still does not fire. No manuscript text exists past the permanence question — Trace 009 needs Part 2 before it or a Ch.1–9 summary can be finalized.
+
 ---
 
 ## Section 8: Open Questions
@@ -306,7 +327,8 @@ S fully activated and deactivated. Z truncated at bank confrontation (mob invade
 | Hum-compelled disclosure vs. physics? | Resolved — Ruling 6.7. Compelled = disclosure not conviction. τ requires agency. Confirmed across 2 characters (Thorne Ch.6, Cassie Ch.7). |
 | D composition changes? | Open. One exit (Miller, Ch.5) + one addition (Rachel Díaz + crew, Ch.7) + one split (Rachel+Cassie depart, Valeria stays, Ch.8 — D persists across both branches). Does D require minimum/maximum membership, or a single location? Ch.8 says location isn't required. |
 | τ — non-approach earned transition? | Resolved — Ruling 6.10. Confirmed via Thorne's Ch.8 confession arc. |
-| A(Valeria+Thorne) resolution? | Open. Activated Ch.8, remains active/unresolved at chapter close. Watch for structural resolution (one force resolving the other) vs. continued open tension into Ch.9+. |
+| A(Valeria+Thorne) resolution? | Open. Thorne's fate is confirmed (alive, permanent witness) as of Ch.9 Part 1 — a structural/crowd verdict, not a personal resolution. The tension between Valeria and Thorne specifically remains unaddressed. Still watching. |
+| Is the Hum's spread permanent? | Open — this is the exact question Ch.9 cuts off on. Thorne told Valeria/Rachel privately in Ch.7 that it's self-sustaining/uncontrollable; whether he says so publicly here is unwritten. |
 
 ---
 
@@ -318,9 +340,7 @@ S fully activated and deactivated. Z truncated at bank confrontation (mob invade
 - ~~Trace 006 (Ch.6) — D persists across POV, Ruling 6.7 confirmed, no new nodes~~ **DONE**
 - ~~Trace 007 (Ch.7) — F does not fire, D-composition addition #2 (Rachel Díaz + crew), Ruling 6.7 extended to Cassie, Rulings 6.8 + 6.9 issued~~ **DONE**
 - ~~Trace 008 (Ch.8) — A(Valeria+Thorne) activates, Thorne's first Z (Complete, non-terminal, ambiguous fate), Valeria's Ch.3 deferred Z resolves, D-composition split event #3, Ruling 6.10 issued (τ hunt resolved), Manuscript Defect 8.1 logged~~ **DONE**
-
-**PAUSED after Trace 008 (2026-07-08).** No usable Ch.9 manuscript exists. Two candidates were checked and rejected as not continuing this storyline: (1) "Chapter 9: The Anatomy of the Quiet" from the old Full Story file — an unrelated bystander vignette (Leo, a garbage-truck driver), part of the same superseded draft branch that produced the abandoned Ch.7/Ch.8 alternates; (2) "Chapter Nine: Echoes" — a mystical secret-society narrative (Cassie as an "initiate" at a "Veritas Compound," alongside new characters Agent Caldras/Keon/Eli/Aya) with no Hum, no Thorne, no Federal Building — almost certainly a different manuscript or an early/abandoned concept sharing only the title and a character name. Tracing either would corrupt the corpus rather than extend it (no node in either text meaningfully connects to A(Valeria+Thorne), D's unified pursuit, or the deferred-Z apparatus this corpus is built on).
-
-**Ch.8 stands as the corpus's current endpoint** — a clean stopping point: Thorne's confession landed, Valeria's long-deferred Ch.3 Z resolved, the broadcast confirmed sent. Resume with a real Trace 009 only once manuscript text that actually continues from Ch.8's cliffhanger (Thorne's ambiguous fate, Valeria alone in the Aegis Suite, the broadcast just gone out) becomes available. Original watch items for whenever that happens: does A(Valeria+Thorne) structurally resolve or carry forward unresolved? Does Thorne's fate get confirmed (if dead, does it become the 2nd terminal-Z instance)? Does D re-consolidate or split further? Does F finally fire?
+- **Trace 009 (Part 1) — Ch.9 (The Judgment).** Diane Foster named. Thorne's fate confirmed alive/non-terminal via crowd verdict (permanent witness, released once exhausted of use). F still does not fire. **MANUSCRIPT INCOMPLETE** — cuts off before Thorne answers whether the Hum's spread is permanent. Two earlier Ch.9 candidates ("The Anatomy of the Quiet" — an unrelated bystander vignette from the old superseded draft branch; "Chapter Nine: Echoes" — a mystical secret-society narrative sharing only the title) were checked and rejected as not continuing this storyline.
+- **Trace 009 (Part 2) — needed to complete Ch.9.** Awaiting Thorne's answer to the permanence question. Watch: does this finally give F a real approach-to-resolution signal, or does confirming permanence widen scope further (consistent with every prior "reveal" in this manuscript)? Does A(Valeria+Thorne) get any closer to structural resolution?
 - **Traces 009–014** — Ch.9 through Ch.14 (Judgment, Spread, Adaptation, Remaining Names, New Order, Living with Truth). G and F activation, A(Cassie+Valeria) maturation arc, extended aftermath.
 - **Grammar encoding** — after all chapter traces complete and prototype validates the full arc.
