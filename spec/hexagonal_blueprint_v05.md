@@ -1,9 +1,19 @@
 # HEXAGONAL BLUEPRINT
 Node Validation & Mapping Document
 Creative OS — Standalone Implementation
-Version 0.9 — Trace 009 (Part 1, Ch.9) added, MANUSCRIPT INCOMPLETE — ends mid-cliffhanger
+Version 0.10 — Dogfood stress test: first PHYSICS_VIOLATION formally recorded (Section 9)
 
-**Changes from v0.8:**
+**Changes from v0.9:**
+Engine extended with `flag_physics_violation()` on `NodeEngine`, mirroring the existing
+auto-detected Lore Creep mechanism — Ruling 6.7 defined a conviction-change test in prose
+from the start, but nothing before now let the engine formally *record* a violation of it.
+Used it once, for real: the other manuscript draft's own Ch.7–8 ("The Fallout of Angels" /
+"Doctrine of Silence"), forked at the shared Ch.6, reintroduces Thorne in a fully-recommanded,
+cold operational state with no on-page event earning a reversion from the confessor state
+Ch.6 (already traced, shared, committed as Trace 006) left him in. First formally-recorded
+PHYSICS_VIOLATION in the corpus. See Section 9.
+
+**Changes from v0.8 → v0.9 (Trace 009 Part 1):**
 Trace 009 Part 1 added: Diane Foster (the Ch.7/Ch.8 checkpoint woman) named; Thorne's Ch.8 ambiguous fate resolves to CONFIRMED ALIVE, sentenced as a permanent witness/pariah rather than killed by the crowd — closes that half of the open question, but A(Valeria+Thorne) itself stays active/unresolved (a crowd verdict about Thorne isn't a personal resolution between him and Valeria). F still does not fire. The manuscript itself cuts off mid-scene, before Thorne answers whether the Hum's spread is permanent — no node fires on an answer that doesn't exist yet. Awaiting Part 2 before this trace or the corpus summary can be called complete for Ch.9.
 
 **Changes from v0.7 → v0.8 (Trace 008):**
@@ -329,6 +339,69 @@ S fully activated and deactivated. Z truncated at bank confrontation (mob invade
 | τ — non-approach earned transition? | Resolved — Ruling 6.10. Confirmed via Thorne's Ch.8 confession arc. |
 | A(Valeria+Thorne) resolution? | Open. Thorne's fate is confirmed (alive, permanent witness) as of Ch.9 Part 1 — a structural/crowd verdict, not a personal resolution. The tension between Valeria and Thorne specifically remains unaddressed. Still watching. |
 | Is the Hum's spread permanent? | Open — this is the exact question Ch.9 cuts off on. Thorne told Valeria/Rachel privately in Ch.7 that it's self-sustaining/uncontrollable; whether he says so publicly here is unwritten. |
+
+---
+
+## Section 9: Alternate Branch — Dogfood Stress Test
+
+**Context.** Every trace through Ch.9 had zero Lore Creep violations and zero physics
+violations. That's good evidence the manuscript we traced is disciplined, but it left an
+open question about the *tool*: does `NodeEngine` actually catch a real mistake, or has it
+only ever been asked to confirm that nothing went wrong? Lore Creep is auto-detected from
+the 3-slot count, so that mechanism is self-testing by construction. Ruling 6.7's
+conviction-change test is not — it's a prose definition applied by judgment each time, with
+no formal record of a violation ever having been logged.
+
+**The manuscript has a second draft to test it against.** A second file
+("Veritas Expanded Full Story.txt") shares Ch.1–6 verbatim with the traced corpus, then
+forks into its own continuation — different Ch.7 ("The Fallout of Angels"), different Ch.8
+("Doctrine of Silence"), different weapon-program name ("Project CORDELIA" vs. "PSH"),
+different faction name ("Silence Seekers" vs. "the Purified"), and a fully-written arc
+through to an epilogue (Ch.14). Read in full — see below — its own internal Ch.7–14 holds
+together on its own terms; the interesting seam is the fork point itself.
+
+**Engine change required.** Added `flag_physics_violation(scene, entity, description,
+contradicts)` to `NodeEngine`, alongside a `self.physics_violations` list and a summary
+line reporting it — same shape as the existing `self.violations` (Lore Creep) list. This
+does not make conviction-change detection automatic (the engine still can't read prose or
+infer psychology); it gives the trace-writer a formal place to record the call once made,
+the same way Manuscript Defects already get logged in prose but Lore Creep gets logged
+mechanically. The gap being closed is that Ruling 6.7 had a test but no instance.
+
+**Result — one real violation, formally recorded.** Traced this branch's own Ch.7
+("Fallout of Angels") against the forked engine state: clean, no violations — Thorne never
+appears on-page, so nothing there can yet contradict his Ch.6 exit-state. Ch.8 ("Doctrine
+of Silence") reintroduces him directly: fully recommanded, cold, ordering Phase 5 (a
+deafening weapon) and "Lethal Extraction" on Valeria, with no scene between Ch.6's close
+and this one showing how or why he reverted from "a man with a confession" back to a
+still-scheming commander. Per Ruling 6.7's own test — does the character's core thesis
+change without being earned on the page? — this is exactly the failure case the ruling was
+written to catch. Logged as the corpus's first `PHYSICS_VIOLATION`:
+
+```
+entity: Thorne
+scene: ch8alt.aegis_suite_thorne_recommands
+description: Reappears fully in command -- cold, operational, giving orders --
+  with no on-page event explaining a reversion from the confessor state Ch.6
+  left him in.
+contradicts: ch6.thorne_into_hallway (Trace 006) -- commander-to-confessor
+  shift, Ruling 6.7. Declared state: guilt-ridden, moving toward surrender.
+```
+
+**Secondary finding (manuscript defect, not physics).** The weapon program is named
+"Project CORDELIA" in this branch vs. "PSH" in the traced canonical branch — a
+worldbuilding/naming inconsistency, logged separately since it's not a character-conviction
+question.
+
+**No Lore Creep violations** fired in this pass (peak slot count stayed at 2 — the
+promising node-density moment flagged earlier, the Ch.12 Acoustic Well climax, wasn't
+traced in this stress test; tracing further into this branch is a candidate for actually
+triggering the 3-slot limit for the first time, if that validation is wanted next).
+
+**Conclusion.** This is the dogfood-gate evidence that was missing: not "the manuscript
+stayed clean," but "the tool caught something wrong when given something wrong to catch,"
+using its own already-established rules (Ruling 6.7), applied mechanically for the first
+time rather than only narrated about.
 
 ---
 

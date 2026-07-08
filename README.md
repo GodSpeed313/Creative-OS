@@ -296,8 +296,9 @@ Seven narrative states, Greek markers for transitions between them, and hard rul
 ### Rules
 
 - **Adjacency:** every node must have at least one defined adjacent node before it can fire
-- **Simultaneous activation limit:** maximum 3 nodes active at once without Z (Checkpoint) firing first — exceeding this triggers Lore Creep
+- **Simultaneous activation limit:** maximum 3 nodes active at once without Z (Checkpoint) firing first — exceeding this triggers Lore Creep (auto-detected from the slot count)
 - **Floor nodes:** π is always present and does not consume an activation slot; H may be elevated to floor status when a story's premise permanently dissolves structural bounds (see `spec/hexagonal_blueprint_v03.md`)
+- **Physics violations:** does a character's core conviction change without being earned on the page (Ruling 6.7)? Unlike Lore Creep, this isn't auto-detected — it's a judgment call the trace-writer records via `flag_physics_violation()`. First real instance caught in the v0.10 dogfood stress test (`spec/hexagonal_blueprint_v05.md`, Section 9).
 
 ### Validation
 
@@ -320,7 +321,7 @@ Full spec: [`spec/hexagonal_blueprint_v04.md`](spec/hexagonal_blueprint_v04.md)
 | M2 | Float tension system, IDP, Sandbox Commit Logic | ✅ Complete |
 | Hex v0.3 | Hexagonal Blueprint — node definitions locked, Ch.1 trace validated | ✅ Complete |
 | Hex v0.4 | Ch.2 + Ch.3 traced — S/Z/A definitions refined, 6 rulings issued | ✅ Complete |
-| Hex v0.9 | Node transition prototype (Jupyter → code) — Traces 001-008 complete (Ch.1-8) + Trace 009 Part 1 (Ch.9, in progress), 10 rulings issued, zero Lore Creep violations | In Progress — Ch.9 manuscript incomplete |
+| Hex v0.10 | Node transition prototype (Jupyter → code) — Traces 001-008 complete (Ch.1-8) + Trace 009 Part 1 (Ch.9, in progress), 10 rulings issued, first PHYSICS_VIOLATION formally caught via an alternate-branch dogfood stress test | In Progress — Ch.9 manuscript incomplete |
 | M3 | Living Graph Database — story bible integration (The Architect) | Planned |
 | M4 | Real-time drafting monitor — Live Vibe-Checks (The Pilot) | Planned |
 | M5 | Developmental Analysis + Voice Audit (The Editor) | Planned |
