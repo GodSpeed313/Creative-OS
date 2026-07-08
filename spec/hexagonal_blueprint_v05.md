@@ -1,10 +1,10 @@
 # HEXAGONAL BLUEPRINT
 Node Validation & Mapping Document
 Creative OS — Standalone Implementation
-Version 0.7 — Rulings 6.8 (Sustained α) + 6.9 (Z-variant thematic close) | Trace 007 added | Ruling 6.7 extended to Cassie
+Version 0.8 — Ruling 6.10 (τ beyond approach sequences) | Trace 008 added | Thorne's first Z | Valeria's Ch.3 deferred Z resolves
 
-**Changes from v0.6:**
-Ruling 6.8 issued: Sustained α confirmed as a distinct trace-worthy pattern (3rd instance, Ch.7 city-crossing montage; a 4th appears same chapter) | Ruling 6.9 issued: Z-variant thematic chapter-close confirmed as distinct from true Z (3rd instance, Ch.7 elevator close) | Ruling 6.7 extended: Cassie's Purified-checkpoint disclosure (Ch.7) confirms the disclosure-vs-conviction test across a second character | Trace 007 added (Ch.7 — F does not fire, D-composition addition #2, γ at Shadow Ledger decryption, no Lore Creep) | τ hunt continues, still 4/4 approach sequences
+**Changes from v0.7:**
+Ruling 6.10 issued: τ confirmed to fire on a non-approach, agency-driven transition (Thorne's confession arc, Ch.8) — resolves the hunt open since Ch.5 | Trace 008 added (Ch.8 — A(Valeria+Thorne) finally activates on physical co-location; Thorne's first personal Z fires, Complete but fate left ambiguous, not terminal; Valeria's Truncated Z from Ch.3 resolves via Ruling 6.4's deferral clause; D-composition event #3 — a split, not exit or addition; F still does not fire; Manuscript Defect 8.1 logged — Cassie present in the Aegis Suite with no described entry, contradicting Ch.7's stated headcount)
 
 ---
 
@@ -157,6 +157,19 @@ A can activate tilted. Tilt carries armor-status information. Track maturation a
 
 **Encoding note:** Tag as δ(thematic) at chapter-close. Does not consume a node slot, does not fire Z.
 
+### Ruling 6.10 — τ Beyond Approach Sequences *(confirmed v0.8)*
+
+**Issued:** Veritas Ch.5 trace (v0.6 — hunt opened after 4/4 approach instances)
+**Resolved:** Veritas Ch.8 trace (v0.8 — non-approach instance confirmed)
+
+**Ruling:** τ is not limited to physical approach sequences. It fires on any duration-dependent, agency-driven transition — the defining features are (1) the state change requires the full span of the scene to complete, and (2) the character has genuine agency in it. Physical approach (boardroom walk-up, drive, chandelier escape, crane climb) was simply the first shape τ happened to take in this manuscript; it is not part of the definition.
+
+**Test against Ruling 6.7's corollary:** Ruling 6.7 disqualified Thorne's Ch.6 commander→confessor shift from τ because it was Hum-*compelled* — no agency. Thorne's Ch.8 confession arc is different in kind: he chooses what to reveal, chooses the frame ("this was policy, not one man"), and chooses to walk out and face the crowd rather than flee via the Cleaners (explicitly available, explicitly declined). Compulsion (can't lie) and agency (what to do about it) are not mutually exclusive — Ch.8 is the proof.
+
+**Evidence:** Spans `ch8.thorne_badge_i_was_wrong` (the transition begins — "I was wrong. Not about the goal. About the cost.") through `ch8.thorne_public_confession_oncamera` (the transition lands — full on-camera confession, Z fires in the same beat). Duration: the greater part of the chapter. Fifth τ instance overall; first non-approach.
+
+**Co-occurrence with Z:** τ and Z fired together once before (Ch.1 boardroom). Ch.8 repeats the pattern — a duration-dependent transition landing exactly at the moment a character's identity-collapse completes is not a coincidence, it's the expected shape when τ marks earned change rather than forced disclosure.
+
 ---
 
 ## Section 7: Story Scenario Traces
@@ -248,6 +261,32 @@ S fully activated and deactivated. Z truncated at bank confrontation (mob invade
 
 **Key rulings confirmed/issued:** Ruling 6.8 (sustained α, 3rd instance). Ruling 6.9 (Z-variant thematic close, 3rd instance). Ruling 6.7 extended to Cassie. F does not fire. τ hunt continues. Deferred Valeria Z remains open to Ch.8.
 
+### Trace 008 — Veritas, Chapter 8: The Consortium *(v0.8)*
+
+**Date:** 2026-07-08
+**Manuscript Defect 8.1 logged:** Ch.7 closes with only Valeria, Rachel, and the camera operator entering the Federal Building ("Valeria, Rachel, and the camera operator stepped inside. The door locked behind them"). Ch.8 has Cassie present and speaking in the Aegis Suite with no described entry. Traced as-written; the gap is flagged, not silently patched.
+
+**Result:** A(Valeria+Thorne) activates — physical co-location finally met, deferred since Ch.6 ("phone call is α, not A"). Not tilted; direct adversarial confrontation. Thorne undergoes his first personal Z (Complete) — an earned, agency-driven identity collapse spanning most of the chapter, distinct from Ch.6's Hum-compelled disclosure. His fate is left ambiguous at chapter close (crowd erupts in confusion, not consensus) — **not** confirmed terminal, unlike Miller's Ch.5 Z; does not count toward the terminal-Z sub-mode ruling. A(Valeria+Thorne) remains active and unresolved at chapter close — an open thread into Ch.9. Valeria's Truncated Z from Ch.3 **resolves** here via Ruling 6.4's deferral clause (sealed scene + self-confessed + uninterrupted, once Rachel and Cassie depart) — no deferred Z remain open in the corpus. τ fires its 5th instance here, and it is the first **non-approach** instance — Ruling 6.10 issued, resolving the hunt open since Ch.5. γ fires at the consortium naming (new state: full authorization network on record), but F still does not fire — this confirms scale already known from Ch.7's decryption rather than narrowing toward resolution; six chapters of aftermath remain untouched. D gains a third composition event: a **split** (Rachel + Cassie depart for the broadcast, Valeria stays with Thorne) — D persists across both branches, new evidence that D tolerates separated membership without deactivating. No Lore Creep violations across the full corpus; peak slot count 3 (A+D+Z, at Thorne's confession).
+
+| Scene | Nodes Active | Markers | Slots |
+| --- | --- | --- | --- |
+| Elevator ascent — dialogue on Thorne, her father, certainty vs. truth | A, D | σ | 2 |
+| Aegis Suite — Thorne confronted, A(Valeria+Thorne) activates | A, D | δ (co-location finally met) | 2 |
+| Cassie confronts the casualty-rate lie | A, D | δ (Ruling 6.7 pattern continues) | 2 |
+| Thorne, badge in hand — "I was wrong. Not the goal. The cost." | A, D | τ begins (5th instance — non-approach) | 2 |
+| Full consortium named on camera | A, D | γ (new state: authorization network) | 2 |
+| Hard drive handed to Cassie | A, D | δ | 2 |
+| Broadcast-before-confession deadline set (8:30 PM) | A, D | α | 2 |
+| Rachel + Cassie depart; Valeria stays | A, D | δ (D-composition event #3 — split) | 2 |
+| Valeria's uninterrupted confession to Thorne | A, D | δ (deferred Z resolves — Ruling 6.4) | 2 |
+| Thorne recounts the final call with Thomas Knox | A, D | τ continues, σ | 2 |
+| Public on-camera confession — full consortium testimony | A, D, Z | Z fires (Complete, entity=Thorne); τ lands (Ruling 6.10) | 3 |
+| Purified mark him — fate left ambiguous | A, D | δ (Z resolves, not terminal) | 2 |
+| Three Purified confront Valeria; she explains, they leave | A, D | σ | 2 |
+| Broadcast confirmed — chapter close | A, D | δ (thematic — 4th instance, reinforcing Ruling 6.9) | 2 |
+
+**Key rulings confirmed/issued:** Ruling 6.10 (τ beyond approach sequences — hunt resolved). A(Valeria+Thorne) activates. Thorne's first Z — Complete, not terminal, fate ambiguous. Valeria's Ch.3 deferred Z resolves — zero deferred Z remain. D-composition event #3 (split). F still does not fire. Manuscript Defect 8.1 logged.
+
 ---
 
 ## Section 8: Open Questions
@@ -263,10 +302,11 @@ S fully activated and deactivated. Z truncated at bank confrontation (mob invade
 | Sustained α — distinct marker? | Resolved — Ruling 6.8. Three instances confirmed (Ch.4, Ch.6, Ch.7×2). |
 | Z variant — thematic statements? | Resolved — Ruling 6.9. Three instances confirmed (Ch.3, Ch.5, Ch.7). |
 | D deactivation in non-Veritas projects? | Open. Only confirmed at G/F. Other deactivation conditions may emerge. |
-| Terminal Z sub-mode? | Open. One instance (Miller, Ch.5). Two more instances needed before ruling. |
+| Terminal Z sub-mode? | Open. One instance (Miller, Ch.5). Thorne's Ch.8 Z is Complete but ambiguous/non-terminal — does not count. Two more terminal instances still needed before ruling. |
 | Hum-compelled disclosure vs. physics? | Resolved — Ruling 6.7. Compelled = disclosure not conviction. τ requires agency. Confirmed across 2 characters (Thorne Ch.6, Cassie Ch.7). |
-| D composition changes? | Open. One exit event (Miller, Ch.5) + one addition event (Rachel Díaz + crew, Ch.7). Does D require minimum/maximum membership? |
-| τ — non-approach earned transition? | Open. Still 4/4 approach sequences after Ch.7. Hunt continues Ch.8+. |
+| D composition changes? | Open. One exit (Miller, Ch.5) + one addition (Rachel Díaz + crew, Ch.7) + one split (Rachel+Cassie depart, Valeria stays, Ch.8 — D persists across both branches). Does D require minimum/maximum membership, or a single location? Ch.8 says location isn't required. |
+| τ — non-approach earned transition? | Resolved — Ruling 6.10. Confirmed via Thorne's Ch.8 confession arc. |
+| A(Valeria+Thorne) resolution? | Open. Activated Ch.8, remains active/unresolved at chapter close. Watch for structural resolution (one force resolving the other) vs. continued open tension into Ch.9+. |
 
 ---
 
@@ -277,6 +317,7 @@ S fully activated and deactivated. Z truncated at bank confrontation (mob invade
 - ~~Trace 005 (Ch.5) — revised v0.6: Miller terminal Z, D-composition event, Z variant 2/3~~ **DONE**
 - ~~Trace 006 (Ch.6) — D persists across POV, Ruling 6.7 confirmed, no new nodes~~ **DONE**
 - ~~Trace 007 (Ch.7) — F does not fire, D-composition addition #2 (Rachel Díaz + crew), Ruling 6.7 extended to Cassie, Rulings 6.8 + 6.9 issued~~ **DONE**
-- **Trace 008 — Ch.8 (The Consortium).** Aegis Suite confrontation. A(Valeria+Thorne) activates. Deferred Valeria Z (Truncated, Ch.3) resolves here — Ruling 6.4 deferral clause. Watch Thorne's confession under Ruling 6.7. Continue τ hunt for a non-approach earned transition.
+- ~~Trace 008 (Ch.8) — A(Valeria+Thorne) activates, Thorne's first Z (Complete, non-terminal, ambiguous fate), Valeria's Ch.3 deferred Z resolves, D-composition split event #3, Ruling 6.10 issued (τ hunt resolved), Manuscript Defect 8.1 logged~~ **DONE**
+- **Trace 009 — Ch.9 (Judgment).** Watch: does A(Valeria+Thorne) structurally resolve, or carry forward unresolved? Does Thorne's ambiguous fate get confirmed (alive/dead) — if dead, does it retroactively become the 2nd terminal-Z instance? Watch for D re-consolidation (Rachel+Cassie return) or further split. Watch for F — six chapters remain, but Ch.9's title suggests a judgment/consequence beat that may be the first real approach-to-resolution signal.
 - **Traces 009–014** — Ch.9 through Ch.14 (Judgment, Spread, Adaptation, Remaining Names, New Order, Living with Truth). G and F activation, A(Cassie+Valeria) maturation arc, extended aftermath.
 - **Grammar encoding** — after all chapter traces complete and prototype validates the full arc.
