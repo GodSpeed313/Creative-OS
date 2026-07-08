@@ -512,6 +512,21 @@ without altering any prior finding.
 
 ## Next Steps
 
+### DOGFOOD GATE — MET (2026-07-08)
+
+Not "the manuscript stayed clean" — the tool caught a real, formally-recorded
+PHYSICS_VIOLATION when given a branch that genuinely contradicted itself, correctly
+declined to manufacture a Lore Creep violation at the densest scene either draft
+contains (with a traceable reason why), and surfaced two real engine-level bugs through
+actual use, both fixed and re-verified (Section 9). The alternate branch used for the
+stress test is a complete, independently-written story in its own right (not a synthetic
+test fixture) and is the only second manuscript available — this is the dogfood
+validation Creative OS is going to get. Declared complete; not blocked on finding a third
+manuscript. Same disposition as Pi Script's M5 gate: met, then moved forward rather than
+re-litigated.
+
+---
+
 - ~~Traces 001–003 complete, prototype running~~ **DONE**
 - ~~Trace 004 (Ch.4) — revised v0.6: Z Complete (Valeria), Defects 5.1/5.2 logged~~ **DONE**
 - ~~Trace 005 (Ch.5) — revised v0.6: Miller terminal Z, D-composition event, Z variant 2/3~~ **DONE**
