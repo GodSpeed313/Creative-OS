@@ -298,7 +298,7 @@ Seven narrative states, Greek markers for transitions between them, and hard rul
 - **Adjacency:** every node must have at least one defined adjacent node before it can fire
 - **Simultaneous activation limit:** maximum 3 nodes active at once without Z (Checkpoint) firing first — exceeding this triggers Lore Creep (auto-detected from the slot count)
 - **Floor nodes:** π is always present and does not consume an activation slot; H may be elevated to floor status when a story's premise permanently dissolves structural bounds (see `spec/hexagonal_blueprint_v03.md`)
-- **Physics violations:** does a character's core conviction change without being earned on the page (Ruling 6.7)? Unlike Lore Creep, this isn't auto-detected — it's a judgment call the trace-writer records via `flag_physics_violation()`. First real instance caught in the v0.10 dogfood stress test (`spec/hexagonal_blueprint_v05.md`, Section 9).
+- **Physics violations:** does a character's core conviction change without being earned on the page (Ruling 6.7)? The judgment call itself is still the trace-writer's — the engine can't read prose — but `declare_state()` + automatic reminders (on both `activate()` and `report()`) now surface a character's last-known state without depending on memory, and `flag_physics_violation()` auto-fills what's being contradicted. First real instance caught in the v0.10 dogfood stress test, engine hardened in v0.13 after catching a real gap in its own review (`spec/hexagonal_blueprint_v05.md`, Section 9).
 
 ### Validation
 
@@ -321,7 +321,7 @@ Full spec: [`spec/hexagonal_blueprint_v04.md`](spec/hexagonal_blueprint_v04.md)
 | M2 | Float tension system, IDP, Sandbox Commit Logic | ✅ Complete |
 | Hex v0.3 | Hexagonal Blueprint — node definitions locked, Ch.1 trace validated | ✅ Complete |
 | Hex v0.4 | Ch.2 + Ch.3 traced — S/Z/A definitions refined, 6 rulings issued | ✅ Complete |
-| Hex v0.12 | Node transition prototype (Jupyter → code) — Traces 001-008 complete (Ch.1-8) + Trace 009 Part 1 (Ch.9, in progress), 10 rulings issued, alternate-branch dogfood stress test complete through its actual ending — first PHYSICS_VIOLATION caught, zero Lore Creep with a traceable reason why, G correctly does not fire at a deliberately-ambiguous ending | In Progress — Ch.9 manuscript incomplete |
+| Hex v0.13 | Node transition prototype (Jupyter → code) — Traces 001-008 complete (Ch.1-8) + Trace 009 Part 1 (Ch.9, in progress), 10 rulings issued, alternate-branch dogfood stress test complete through its actual ending (first PHYSICS_VIOLATION caught, zero Lore Creep with a traceable reason why, G correctly does not fire at a deliberately-ambiguous ending), engine hardened with declared-state auto-reminders + a deferred-Z misuse warning after the stress test surfaced both gaps for real | In Progress — Ch.9 manuscript incomplete |
 | M3 | Living Graph Database — story bible integration (The Architect) | Planned |
 | M4 | Real-time drafting monitor — Live Vibe-Checks (The Pilot) | Planned |
 | M5 | Developmental Analysis + Voice Audit (The Editor) | Planned |

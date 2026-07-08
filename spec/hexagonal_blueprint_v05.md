@@ -1,9 +1,17 @@
 # HEXAGONAL BLUEPRINT
 Node Validation & Mapping Document
 Creative OS — Standalone Implementation
-Version 0.12 — Dogfood stress test complete through the alt-branch's actual ending (Section 9)
+Version 0.13 — Engine hardening: declared_state + auto-reminders, deferred-Z misuse warning
 
-**Changes from v0.11:**
+**Changes from v0.12:**
+Two real issues surfaced by the dogfood stress test got fixed in the engine itself, not just noted:
+
+1. **Physics-violation detection was 100% manual** — the trace-writer had to recall or re-search prior chapters from memory every time a character reappears. Added `declare_state(entity, description, scene)` to formally record a character's current core conviction, and wired automatic reminders into both `activate()` (checks entities in the activation) and `report()` (checks the scene label itself, case-insensitive substring match) — the latter closes a real gap: Thorne's actual Ch.8-alt reappearance was a plain `report()` call with no node activating, so the `activate()`-only version of this fix would not have caught the real case. Verified it now does. `flag_physics_violation()`'s `contradicts` argument is now optional, auto-filled from `declared_state` when omitted.
+2. **A deferred-Z misuse footgun** — `deactivate()` silently leaves stale entries in `deferred_z` if the trace-writer calls it instead of `resolve_deferred_z()` on an already-Truncated/Partial-External Z. This is exactly the mistake made and self-caught while tracing Ch.12-alt (see below). `deactivate()` now prints a warning immediately when this happens, naming the stale entries and suggesting the fix, instead of requiring the trace-writer to notice it later in a summary review.
+
+Re-ran the full alt-branch trace against the hardened engine to confirm both fixes fire correctly on the real material, not just in isolated tests — results unchanged (1 physics violation, 0 Lore Creep, 1 deferred Z remaining — Valeria's genuine Ch.3 one), now with the reminder mechanism visibly firing at the Ch.8-alt violation point and every later Thorne mention.
+
+**Changes from v0.11 → v0.12:**
 Traced the rest of the alt-branch: Ch.13's remainder, all of Ch.14, and its epilogue — the manuscript's actual ending. Cassie fires her first Z in either branch (ends her Z-free-since-Ch.2 streak). Tested whether G fires at the literal last page of a finished 14-chapter-plus-epilogue story — it does not, because the ending is deliberately ambiguous rather than resolved; logged as a new open question (the node set may not yet cover thematically-open endings). Also self-caught and corrected a trace-authoring mistake: Valeria's Ch.12 Z was mistagged `Truncated` instead of `Complete`, which left it stuck open in the deferred-Z list since `deactivate()` doesn't clear deferrals — fixed and re-traced, noted rather than quietly patched.
 
 **Changes from v0.9 → v0.11 (Section 9, first two passes):**
@@ -477,6 +485,28 @@ stayed clean," but "the tool caught something wrong when given something wrong t
 none existed, with a traceable reason why" (the Ch.12 climax). Both results used the
 system's own already-established rules, applied mechanically rather than only narrated
 about.
+
+**Post-mortem: two real issues, both fixed in the engine (v0.13).** Running an actual
+dogfood stress test surfaced problems a clean trace never would have:
+
+1. *Physics-violation detection was entirely manual.* Catching the Ch.8-alt contradiction
+   required personally recalling Ch.6's committed text — nothing in the tool surfaced it.
+   Added `declare_state(entity, description, scene)` plus automatic reminders wired into
+   both `activate()` and `report()`. The `report()` half matters specifically: Thorne's
+   real reappearance in Ch.8-alt is a plain `report()` call with no node activating, so an
+   `activate()`-only fix would have missed the actual case. Verified against the real
+   trace, not just a synthetic test.
+2. *A silent deferred-Z footgun.* Valeria's Ch.12 Z was mistagged `Truncated` when it
+   should have been `Complete` (it resolves in-scene via her own decisive action, not an
+   external cutoff). Because `deactivate()` doesn't clear `deferred_z` — only
+   `resolve_deferred_z()` does — this left a phantom permanently-open entry that only
+   surfaced because the final corpus summary happened to be checked. `deactivate()` now
+   warns immediately when this specific misuse pattern occurs.
+
+Both fixes were verified by re-running the full alt-branch trace against the hardened
+engine before being written up here — the result (1 physics violation, 0 Lore Creep, 1
+genuinely-open deferred Z) is unchanged, confirming the fixes add safety/visibility
+without altering any prior finding.
 
 ---
 
